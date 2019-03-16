@@ -47,6 +47,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "TẠO HÓA ĐƠN";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -58,6 +59,7 @@
             this.button2.TabIndex = 0;
             this.button2.Text = " DANH SÁCH HÓA ĐƠN";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -69,6 +71,7 @@
             this.button3.TabIndex = 0;
             this.button3.Text = "KHÁCH HÀNG";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -97,12 +100,13 @@
             this.button5.BackColor = System.Drawing.Color.Tomato;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(465, 248);
+            this.button5.Location = new System.Drawing.Point(465, 243);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(99, 41);
             this.button5.TabIndex = 2;
             this.button5.Text = "Thoát";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // frmMain
             // 

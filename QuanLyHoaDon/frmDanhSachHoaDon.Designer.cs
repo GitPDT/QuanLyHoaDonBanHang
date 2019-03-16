@@ -124,6 +124,7 @@
             this.Controls.Add(this.btThem);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmDanhSachHoaDon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDanhSachHoaDon";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

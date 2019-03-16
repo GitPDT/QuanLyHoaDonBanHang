@@ -47,6 +47,7 @@
             // 
             // txtTK
             // 
+            this.txtTK.BackColor = System.Drawing.Color.White;
             this.txtTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTK.Location = new System.Drawing.Point(110, 15);
             this.txtTK.Multiline = true;
@@ -61,6 +62,7 @@
             this.txtMK.Location = new System.Drawing.Point(110, 66);
             this.txtMK.Multiline = true;
             this.txtMK.Name = "txtMK";
+            this.txtMK.PasswordChar = '*';
             this.txtMK.Size = new System.Drawing.Size(214, 35);
             this.txtMK.TabIndex = 1;
             // 
@@ -76,12 +78,14 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.LimeGreen;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(110, 118);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 39);
             this.button1.TabIndex = 2;
             this.button1.Text = "Đăng nhập";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmLogin

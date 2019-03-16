@@ -36,5 +36,10 @@ namespace QuanLyHoaDon
         {
 
         }
+
+        private void btKhoiTao_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

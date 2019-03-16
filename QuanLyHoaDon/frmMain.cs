@@ -33,5 +33,28 @@ namespace QuanLyHoaDon
                 Application.Exit();
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmTaoHoaDon frm = new frmTaoHoaDon();
+            frm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmDanhSachHoaDon frm = new frmDanhSachHoaDon();
+            frm.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmKhachHang frm = new frmKhachHang();
+            frm.Show();
+        }
     }
 }
