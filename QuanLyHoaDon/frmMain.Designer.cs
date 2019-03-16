@@ -28,66 +28,97 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtTaiKhoan = new System.Windows.Forms.TextBox();
-            this.txtMatKhau = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txtTaiKhoan
+            // button1
             // 
-            this.txtTaiKhoan.Location = new System.Drawing.Point(106, 28);
-            this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(126, 20);
-            this.txtTaiKhoan.TabIndex = 0;
+            this.button1.BackColor = System.Drawing.Color.YellowGreen;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(61, 154);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(503, 70);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "TẠO HÓA ĐƠN";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // txtMatKhau
+            // button2
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(106, 55);
-            this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(126, 20);
-            this.txtMatKhau.TabIndex = 1;
+            this.button2.BackColor = System.Drawing.Color.Khaki;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(237, 78);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(153, 70);
+            this.button2.TabIndex = 0;
+            this.button2.Text = " DANH SÁCH HÓA ĐƠN";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Khaki;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(61, 78);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(153, 70);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "KHÁCH HÀNG";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Khaki;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(411, 78);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(153, 70);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "DOANH THU";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 28);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Tomato;
+            this.label1.Location = new System.Drawing.Point(144, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Tài Khoản";
+            this.label1.Size = new System.Drawing.Size(347, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "QUẢN LÝ HÓA ĐƠN BÁN HÀNG";
             // 
-            // label2
+            // button5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Mật Khẩu";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(106, 94);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 32);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button5.BackColor = System.Drawing.Color.Tomato;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button5.Location = new System.Drawing.Point(465, 248);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(99, 41);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Thoát";
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 154);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(625, 303);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtMatKhau);
-            this.Controls.Add(this.txtTaiKhoan);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -95,10 +126,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtTaiKhoan;
-        private System.Windows.Forms.TextBox txtMatKhau;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button5;
     }
 }

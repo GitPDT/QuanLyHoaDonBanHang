@@ -16,5 +16,22 @@ namespace QuanLyHoaDon
         {
             InitializeComponent();
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            this.Show();
+            this.Enabled = false;
+            frmLogin frm = new frmLogin();
+            DialogResult result = frm.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                this.Enabled = true;
+            }
+            else
+            {
+                Application.Exit();
+            }
+        }
     }
 }
