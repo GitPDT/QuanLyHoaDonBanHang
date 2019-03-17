@@ -16,5 +16,11 @@ namespace QuanLyHoaDon
         {
             InitializeComponent();
         }
+
+        private void btThem_Click(object sender, EventArgs e)
+        {
+            frmTaoHoaDon frm = new frmTaoHoaDon();
+            frm.Show();
+        }
     }
 }
