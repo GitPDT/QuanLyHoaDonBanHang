@@ -27,6 +27,7 @@ namespace QuanLyHoaDon
             if (result == DialogResult.OK)
             {
                 this.Enabled = true;
+                lbDangNhap.Text = "Đăng nhập thành công !";
             }
             else
             {
@@ -54,6 +55,14 @@ namespace QuanLyHoaDon
         private void button3_Click(object sender, EventArgs e)
         {
             frmKhachHang frm = new frmKhachHang();
+            frm.Show();
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Enabled = false;
+            lbDangNhap.Text = "";
+            frmLogin frm = new frmLogin();
             frm.Show();
         }
     }

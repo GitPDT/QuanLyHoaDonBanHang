@@ -39,7 +39,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 25);
+            this.label1.Location = new System.Drawing.Point(17, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 0;
@@ -48,8 +48,10 @@
             // txtTK
             // 
             this.txtTK.BackColor = System.Drawing.Color.White;
-            this.txtTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTK.Location = new System.Drawing.Point(110, 15);
+            this.txtTK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTK.Location = new System.Drawing.Point(91, 17);
             this.txtTK.Multiline = true;
             this.txtTK.Name = "txtTK";
             this.txtTK.Size = new System.Drawing.Size(214, 35);
@@ -58,8 +60,10 @@
             // 
             // txtMK
             // 
-            this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMK.Location = new System.Drawing.Point(110, 66);
+            this.txtMK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtMK.Location = new System.Drawing.Point(91, 66);
             this.txtMK.Multiline = true;
             this.txtMK.Name = "txtMK";
             this.txtMK.PasswordChar = '*';
@@ -70,7 +74,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(36, 77);
+            this.label2.Location = new System.Drawing.Point(17, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 16);
             this.label2.TabIndex = 0;
@@ -79,8 +83,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LimeGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(110, 118);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(200, 113);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 39);
             this.button1.TabIndex = 2;
@@ -92,7 +98,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(361, 172);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(323, 161);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtMK);
             this.Controls.Add(this.txtTK);
