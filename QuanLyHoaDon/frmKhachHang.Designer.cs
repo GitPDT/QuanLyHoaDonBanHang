@@ -35,6 +35,8 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnAddCus = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,9 +50,9 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dgvKhachHang.Location = new System.Drawing.Point(-1, 99);
+            this.dgvKhachHang.Location = new System.Drawing.Point(-1, 66);
             this.dgvKhachHang.Name = "dgvKhachHang";
-            this.dgvKhachHang.Size = new System.Drawing.Size(726, 287);
+            this.dgvKhachHang.Size = new System.Drawing.Size(726, 320);
             this.dgvKhachHang.TabIndex = 0;
             this.dgvKhachHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -95,18 +97,45 @@
             this.Column6.Name = "Column6";
             this.Column6.Width = 40;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(300, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "DANH SÁCH KHÁCH HÀNG";
+            // 
+            // btnAddCus
+            // 
+            this.btnAddCus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAddCus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCus.ForeColor = System.Drawing.Color.White;
+            this.btnAddCus.Location = new System.Drawing.Point(528, 12);
+            this.btnAddCus.Name = "btnAddCus";
+            this.btnAddCus.Size = new System.Drawing.Size(186, 43);
+            this.btnAddCus.TabIndex = 2;
+            this.btnAddCus.Text = "THÊM KHÁCH HÀNG";
+            this.btnAddCus.UseVisualStyleBackColor = false;
+            this.btnAddCus.Click += new System.EventHandler(this.btnAddCus_Click);
+            // 
             // frmKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(726, 387);
+            this.Controls.Add(this.btnAddCus);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvKhachHang);
             this.Name = "frmKhachHang";
-            this.Text = "frmKhachHang";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.frmKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -119,5 +148,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAddCus;
     }
 }

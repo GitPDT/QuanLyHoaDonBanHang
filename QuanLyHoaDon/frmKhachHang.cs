@@ -36,5 +36,11 @@ namespace QuanLyHoaDon
         {
             load();
         }
+
+        private void btnAddCus_Click(object sender, EventArgs e)
+        {
+            frmAddCus frm = new frmAddCus();
+            frm.ShowDialog();
+        }
     }
 }

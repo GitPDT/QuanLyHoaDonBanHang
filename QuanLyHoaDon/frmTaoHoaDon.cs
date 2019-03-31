@@ -29,7 +29,7 @@ namespace QuanLyHoaDon
 
         private void frmTaoHoaDon_Load(object sender, EventArgs e)
         {
-
+            txtMaHD.Select();
         }
 
         private void label1_Click(object sender, EventArgs e)

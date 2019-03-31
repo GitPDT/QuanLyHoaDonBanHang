@@ -27,7 +27,7 @@ namespace QuanLyHoaDon
             if (result == DialogResult.OK)
             {
                 this.Enabled = true;
-                lbDangNhap.Text = "Đăng nhập thành công !";
+                lbDangNhap.Text = "Đăng nhập thành công!";
             }
             else
             {
