@@ -150,6 +150,7 @@
             this.btnAddCustomer.TabIndex = 7;
             this.btnAddCustomer.Text = "Thêm";
             this.btnAddCustomer.UseVisualStyleBackColor = false;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // rdoNam
             // 
@@ -162,7 +163,7 @@
             this.rdoNam.TabStop = true;
             this.rdoNam.Text = "Nam";
             this.rdoNam.UseVisualStyleBackColor = true;
-            this.rdoNam.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rdoNam.CheckedChanged += new System.EventHandler(this.rdoNam_CheckedChanged);
             // 
             // rdoNu
             // 
@@ -175,7 +176,7 @@
             this.rdoNu.TabStop = true;
             this.rdoNu.Text = "Nữ";
             this.rdoNu.UseVisualStyleBackColor = true;
-            this.rdoNu.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rdoNu.CheckedChanged += new System.EventHandler(this.rdoNu_CheckedChanged);
             // 
             // frmAddCus
             // 
@@ -196,10 +197,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmAddCus";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddCus";
+      
             this.ResumeLayout(false);
             this.PerformLayout();
 

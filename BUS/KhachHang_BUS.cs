@@ -12,6 +12,17 @@ namespace BUS
     public class KhachHang_BUS
     {
         KhachHang_DAO khachHangDAO = new KhachHang_DAO();
+        public bool AddCustomerBUS(KhachHang cus)
+        {
+            try
+            {
+                return khachHangDAO.AddCustomer(cus);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
         public List<KhachHang> ShowKhachHang()
         {
             try
