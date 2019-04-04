@@ -13,7 +13,7 @@ namespace DAO
         public bool AddCustomer(KhachHang cus)
         {
             string sql = "INSERT INTO KHACHHANG(MaKH, TenKH, DiaChi, GioiTinh, SoDienThoai) VALUES('"
-                + cus.MaKH + "' ,N '" + cus.TenKH + "' ,N '" + cus.DiaChi + "' , N'" + cus.GioiTinh + "' , '" + cus.SDT+"')";
+                + cus.MaKH + "' , N'" + cus.TenKH + "' , N'" + cus.DiaChi + "' , N'" + cus.GioiTinh + "' , '" + cus.SDT+"')";
             try
             {
                 int number =  myExecuteNoneQuery(sql);

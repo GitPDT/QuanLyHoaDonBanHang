@@ -17,10 +17,15 @@ namespace QuanLyHoaDon
         private string gender;
         List<KhachHang> listCus = new List<KhachHang>();
         KhachHang_BUS khachHangBus = new KhachHang_BUS();
+        frmKhachHang obj = (frmKhachHang)Application.OpenForms["frmKhachHang"];
+     
         public frmAddCus()
         {
             InitializeComponent();
+           
         }
+
+        
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
             try
@@ -29,16 +34,18 @@ namespace QuanLyHoaDon
                 string tenKH = txtTenKH.Text;
                 string diaChiKH = txtDiaChi.Text;
                 string sdtKH = txtSdt.Text;
-                KhachHang cus = new KhachHang(maKh,tenKH,diaChiKH,gender,sdtKH);
+                KhachHang cus = new KhachHang(maKh, tenKH, diaChiKH, gender, sdtKH);
                 bool result = khachHangBus.AddCustomerBUS(cus);
-                listCus = khachHangBus.ShowKhachHang();
-                //
+                
                 if (result == true)
                 {
                     this.Close();
                 }
                 else
                     MessageBox.Show("Thêm thất bại!");
+
+                obj.load();
+                
             }
             catch (SqlException ex)
             {

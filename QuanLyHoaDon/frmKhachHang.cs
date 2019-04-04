@@ -21,7 +21,7 @@ namespace QuanLyHoaDon
         {
             InitializeComponent();
         }
-        private void load()
+        public void load()
         {
             listCus = customerBUS.ShowKhachHang();
             dgvKhachHang.DataSource = listCus;
@@ -42,5 +42,6 @@ namespace QuanLyHoaDon
             frmAddCus frm = new frmAddCus();
             frm.ShowDialog();
         }
+       
     }
 }
