@@ -35,7 +35,7 @@ namespace QuanLyHoaDon
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            frmKhachHang frm = new frmKhachHang();
+            FrmKhachHang frm = new FrmKhachHang();
             frm.Show();
         }
 
@@ -51,7 +51,7 @@ namespace QuanLyHoaDon
             lbDangNhap.Text = "Đăng nhập thành công!";
         }
 
-        private void btnDoanhThu_Click(object sender, EventArgs e)
+        private void BtnDoanhThu_Click(object sender, EventArgs e)
         {
 
         }

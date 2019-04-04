@@ -13,44 +13,22 @@ using System.Data.SqlClient;
 
 namespace QuanLyHoaDon
 {
-    public partial class frmKhachHang : Form
+    public partial class FrmKhachHang : Form
     {
+        
         private string gender;
         List<KhachHang> listCus = new List<KhachHang>();
         KhachHang_BUS customerBUS = new KhachHang_BUS();
-        public frmKhachHang()
+        public FrmKhachHang()
         {
             InitializeComponent();
         }
-        public void load()
+        private void LoadCus()
         {
             listCus = customerBUS.ShowKhachHang();
             dgvKhachHang.DataSource = listCus;
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgvKhachHang.Columns[e.ColumnIndex].Name =="delete")
-            {
-                try
-                {
-                    bool num = customerBUS.Delete(dgvKhachHang.CurrentRow.Cells["id"].Value.ToString());
-                    load();     
-                }
-                catch (SqlException ex)
-                {
-
-                    MessageBox.Show("Loi" + ex.Message);
-                }
-            }
-        }
-
-        private void frmKhachHang_Load(object sender, EventArgs e)
-        {
-            load();
-        }
-
-        private void btnAddCus_Click(object sender, EventArgs e)
+        private void BtnAddCus_Click(object sender, EventArgs e)
         {
             try
             {
@@ -58,6 +36,12 @@ namespace QuanLyHoaDon
                 string tenKH = txtTenKH.Text;
                 string diaChiKH = txtDiaChi.Text;
                 string sdtKH = txtSDT.Text;
+                if (rdoNam.Checked == true)
+                {
+                    gender = "Nam";
+                }
+                else
+                    gender = "Nữ";
                 KhachHang cus = new KhachHang(maKh, tenKH, diaChiKH, gender, sdtKH);
                 bool result = customerBUS.AddCustomerBUS(cus);
 
@@ -67,7 +51,8 @@ namespace QuanLyHoaDon
                 }
                 else
                     MessageBox.Show("Thêm thất bại!");
-                load();
+                LoadCus();
+                Clear();
             }
             catch (SqlException ex)
             {
@@ -76,14 +61,61 @@ namespace QuanLyHoaDon
             }
         }
 
-        private void rdoNam_CheckedChanged(object sender, EventArgs e)
+        private void Clear()
         {
-            gender = "Nam";
+            txtMaKH.Text = txtTenKH.Text = txtDiaChi.Text = txtSDT.Text = "";
+            btnDelete.Enabled = false;
+            btnEdit.Enabled = false;
+        }
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Bạn có muốn xóa?","Cảnh báo!",MessageBoxButtons.YesNo,MessageBoxIcon.Warning)==DialogResult.Yes)
+            {
+                try
+                {
+                    string id = txtMaKH.Text;
+                    bool kq = customerBUS.Delete(id);
+                    if (kq)
+                    {
+                        LoadCus();
+                        Clear();
+                    }
+                    else
+                        MessageBox.Show("Xóa thất bại!");
+                    
+                }
+                catch (SqlException ex)
+                {
+
+                    throw ex;
+                }
+            }
+            
         }
 
-        private void rdoNu_CheckedChanged(object sender, EventArgs e)
+        private void DgvKhachHang_DoubleClick(object sender, EventArgs e)
         {
-            gender = "Nữ";
+            if (dgvKhachHang.CurrentRow.Index != -1)
+            {
+                txtMaKH.Text = dgvKhachHang.CurrentRow.Cells[0].Value.ToString();
+                txtTenKH.Text = dgvKhachHang.CurrentRow.Cells[1].Value.ToString();
+                txtDiaChi.Text = dgvKhachHang.CurrentRow.Cells[2].Value.ToString();
+                txtSDT.Text = dgvKhachHang.CurrentRow.Cells[4].Value.ToString();
+                if (dgvKhachHang.CurrentRow.Cells[3].Value.ToString() == "Nam")
+                {
+                    rdoNam.Checked = true;
+                }
+                else
+                    rdoNu.Checked = true;
+            }
+            btnDelete.Enabled = true;
+            btnEdit.Enabled = true;
+        }
+
+        private void FrmKhachHang_Load_1(object sender, EventArgs e)
+        {
+            LoadCus();
+            Clear();
         }
     }
 }

@@ -170,7 +170,7 @@
             this.btnDoanhThu.Size = new System.Drawing.Size(109, 102);
             this.btnDoanhThu.TabIndex = 4;
             this.btnDoanhThu.UseVisualStyleBackColor = false;
-            this.btnDoanhThu.Click += new System.EventHandler(this.btnDoanhThu_Click);
+            this.btnDoanhThu.Click += new System.EventHandler(this.BtnDoanhThu_Click);
             // 
             // btnHoaDon
             // 

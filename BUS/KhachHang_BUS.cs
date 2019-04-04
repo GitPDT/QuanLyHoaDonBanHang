@@ -34,9 +34,9 @@ namespace BUS
                 throw ex;
             }
         }
-        public bool Delete(string MaKH)
+        public bool Delete(string id)
         {
-            return khachHangDAO.Delete(MaKH);
+            return khachHangDAO.Delete(id);
         }
     }
 }
