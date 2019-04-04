@@ -1,6 +1,6 @@
 ﻿namespace QuanLyHoaDon
 {
-    partial class frmMain
+    partial class FrmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,72 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnTaoHoaDon = new System.Windows.Forms.Button();
+            this.btnHoaDon = new System.Windows.Forms.Button();
+            this.btnKhachHang = new System.Windows.Forms.Button();
+            this.btnDoanhThu = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.lbDangNhap = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btnTaoHoaDon
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Tomato;
-            this.button1.Location = new System.Drawing.Point(61, 154);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(503, 70);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "TẠO HÓA ĐƠN";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnTaoHoaDon.BackColor = System.Drawing.Color.White;
+            this.btnTaoHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaoHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaoHoaDon.ForeColor = System.Drawing.Color.Tomato;
+            this.btnTaoHoaDon.Location = new System.Drawing.Point(61, 154);
+            this.btnTaoHoaDon.Name = "btnTaoHoaDon";
+            this.btnTaoHoaDon.Size = new System.Drawing.Size(503, 70);
+            this.btnTaoHoaDon.TabIndex = 0;
+            this.btnTaoHoaDon.Text = "TẠO HÓA ĐƠN";
+            this.btnTaoHoaDon.UseVisualStyleBackColor = false;
+            this.btnTaoHoaDon.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // button2
+            // btnHoaDon
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Tomato;
-            this.button2.Location = new System.Drawing.Point(220, 78);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(185, 70);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "HÓA ĐƠN";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnHoaDon.BackColor = System.Drawing.Color.White;
+            this.btnHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHoaDon.ForeColor = System.Drawing.Color.Tomato;
+            this.btnHoaDon.Location = new System.Drawing.Point(220, 78);
+            this.btnHoaDon.Name = "btnHoaDon";
+            this.btnHoaDon.Size = new System.Drawing.Size(185, 70);
+            this.btnHoaDon.TabIndex = 0;
+            this.btnHoaDon.Text = "HÓA ĐƠN";
+            this.btnHoaDon.UseVisualStyleBackColor = false;
+            this.btnHoaDon.Click += new System.EventHandler(this.Button2_Click);
             // 
-            // button3
+            // btnKhachHang
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Tomato;
-            this.button3.Location = new System.Drawing.Point(61, 78);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(153, 70);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "KHÁCH HÀNG";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnKhachHang.BackColor = System.Drawing.Color.White;
+            this.btnKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhachHang.ForeColor = System.Drawing.Color.Tomato;
+            this.btnKhachHang.Location = new System.Drawing.Point(61, 78);
+            this.btnKhachHang.Name = "btnKhachHang";
+            this.btnKhachHang.Size = new System.Drawing.Size(153, 70);
+            this.btnKhachHang.TabIndex = 0;
+            this.btnKhachHang.Text = "KHÁCH HÀNG";
+            this.btnKhachHang.UseVisualStyleBackColor = false;
+            this.btnKhachHang.Click += new System.EventHandler(this.Button3_Click);
             // 
-            // button4
+            // btnDoanhThu
             // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Tomato;
-            this.button4.Location = new System.Drawing.Point(411, 78);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(153, 70);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "DOANH THU";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnDoanhThu.BackColor = System.Drawing.Color.White;
+            this.btnDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoanhThu.ForeColor = System.Drawing.Color.Tomato;
+            this.btnDoanhThu.Location = new System.Drawing.Point(411, 78);
+            this.btnDoanhThu.Name = "btnDoanhThu";
+            this.btnDoanhThu.Size = new System.Drawing.Size(153, 70);
+            this.btnDoanhThu.TabIndex = 0;
+            this.btnDoanhThu.Text = "DOANH THU";
+            this.btnDoanhThu.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -106,19 +106,19 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "QUẢN LÝ HÓA ĐƠN BÁN HÀNG";
             // 
-            // button5
+            // btnThoat
             // 
-            this.button5.BackColor = System.Drawing.Color.Tomato;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(465, 230);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(99, 41);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Thoát";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnThoat.BackColor = System.Drawing.Color.Tomato;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnThoat.Location = new System.Drawing.Point(465, 230);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(99, 41);
+            this.btnThoat.TabIndex = 2;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.Button5_Click);
             // 
             // lbDangNhap
             // 
@@ -150,7 +150,7 @@
             this.btnDangXuat.TabIndex = 2;
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.UseVisualStyleBackColor = false;
-            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            this.btnDangXuat.Click += new System.EventHandler(this.BtnDangXuat_Click);
             // 
             // frmMain
             // 
@@ -161,16 +161,15 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbDangNhap);
             this.Controls.Add(this.btnDangXuat);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.btnKhachHang);
+            this.Controls.Add(this.btnDoanhThu);
+            this.Controls.Add(this.btnHoaDon);
+            this.Controls.Add(this.btnTaoHoaDon);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
-            this.Load += new System.EventHandler(this.frmMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -180,12 +179,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnTaoHoaDon;
+        private System.Windows.Forms.Button btnHoaDon;
+        private System.Windows.Forms.Button btnKhachHang;
+        private System.Windows.Forms.Button btnDoanhThu;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label lbDangNhap;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnDangXuat;

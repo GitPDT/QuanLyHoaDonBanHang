@@ -10,22 +10,22 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using BUS;
 
+
 namespace QuanLyHoaDon
 {
-    public partial class frmLogin : Form
+    public partial class FrmLogin : Form
     {
-        bool isLogin = false;
         LoginBUS bus = new LoginBUS();
-        public frmLogin()
+        public FrmLogin()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             string user, pass;
             user = txtTK.Text.Trim();
-            pass = txtMK.Text;
+            pass = txtMK.Text.Trim();
             bool b = false;
             try
             {
@@ -33,25 +33,41 @@ namespace QuanLyHoaDon
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Loi dang nhap\n" + ex.Message, "Login");
+                MessageBox.Show("Lỗi đăng nhập!\n" + ex.Message, "Login");
             }
 
             if (b)
             {
-                isLogin = true;
-                this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                this.Hide();
+                FrmMain frm = new FrmMain();
+                frm.ShowDialog();
             }
             else
             {
-                DialogResult result = MessageBox.Show("Sai TK hoac MK", "Dang nhap", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                if (result == System.Windows.Forms.DialogResult.Cancel)
+                if (txtMK.Text == "" && txtTK.Text == "")
                 {
-                    Application.Exit();
+                    MessageBox.Show("Vui lòng nhập tài khoản và mật khẩu!");
+                }
+                else if (txtTK.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập tên tài khoản!");
+                }
+                else if (txtMK.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập mật khẩu!");
                 }
                 else
                 {
-                    txtMK.Text = "";
-                    txtTK.Focus();
+                    DialogResult result = MessageBox.Show("Tài khoản hoặc Mật khẩu không đúng!", "Đăng nhập", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    if (result == DialogResult.Cancel)
+                    {
+                        Application.Exit();
+                    }
+                    else
+                    {
+                        txtMK.Text = "";
+                        txtTK.Focus();
+                    }
                 }
             }
         }

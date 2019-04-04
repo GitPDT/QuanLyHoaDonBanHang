@@ -10,60 +10,40 @@ using System.Windows.Forms;
 
 namespace QuanLyHoaDon
 {
-    public partial class frmMain : Form
+    public partial class FrmMain : Form
     {
-        public frmMain()
+        public FrmMain()
         {
             InitializeComponent();
         }
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-            this.Show();
-            this.Enabled = false;
-            frmLogin frm = new frmLogin();
-            DialogResult result = frm.ShowDialog();
-
-            if (result == DialogResult.OK)
-            {
-                this.Enabled = true;
-                lbDangNhap.Text = "Đăng nhập thành công!";
-            }
-            else
-            {
-                Application.Exit();
-            }
-        }
-
-        private void button5_Click(object sender, EventArgs e)
+        private void Button5_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             frmTaoHoaDon frm = new frmTaoHoaDon();
             frm.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             frmDanhSachHoaDon frm = new frmDanhSachHoaDon();
             frm.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             frmKhachHang frm = new frmKhachHang();
             frm.Show();
         }
 
-        private void btnDangXuat_Click(object sender, EventArgs e)
+        private void BtnDangXuat_Click(object sender, EventArgs e)
         {
-            this.Enabled = false;
-            lbDangNhap.Text = "";
-            frmLogin frm = new frmLogin();
-            frm.Show();
+            this.Hide();
+            FrmLogin frm = new FrmLogin();
+            frm.ShowDialog();
         }
     }
 }
