@@ -45,5 +45,15 @@ namespace QuanLyHoaDon
             FrmLogin frm = new FrmLogin();
             frm.ShowDialog();
         }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            lbDangNhap.Text = "Đăng nhập thành công!";
+        }
+
+        private void btnDoanhThu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
