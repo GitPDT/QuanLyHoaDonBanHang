@@ -58,5 +58,16 @@ namespace DAO
                 Disconnect();
             }
         }
+        public bool Delete(string id)
+        {
+            string sql = "DELETE FROM KHACHHANG WHERE MaKH = '" + id +"'";
+            int numberOfRow = myExecuteNoneQuery(sql);
+            if (numberOfRow > 0)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
     }
 }

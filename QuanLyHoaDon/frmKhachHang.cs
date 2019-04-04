@@ -15,6 +15,7 @@ namespace QuanLyHoaDon
 {
     public partial class frmKhachHang : Form
     {
+        private string gender;
         List<KhachHang> listCus = new List<KhachHang>();
         KhachHang_BUS customerBUS = new KhachHang_BUS();
         public frmKhachHang()
@@ -29,7 +30,19 @@ namespace QuanLyHoaDon
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //
+            if (dgvKhachHang.Columns[e.ColumnIndex].Name =="delete")
+            {
+                try
+                {
+                    bool num = customerBUS.Delete(dgvKhachHang.CurrentRow.Cells["id"].Value.ToString());
+                    load();     
+                }
+                catch (SqlException ex)
+                {
+
+                    MessageBox.Show("Loi" + ex.Message);
+                }
+            }
         }
 
         private void frmKhachHang_Load(object sender, EventArgs e)
@@ -39,9 +52,38 @@ namespace QuanLyHoaDon
 
         private void btnAddCus_Click(object sender, EventArgs e)
         {
-            frmAddCus frm = new frmAddCus();
-            frm.ShowDialog();
+            try
+            {
+                string maKh = txtMaKH.Text;
+                string tenKH = txtTenKH.Text;
+                string diaChiKH = txtDiaChi.Text;
+                string sdtKH = txtSDT.Text;
+                KhachHang cus = new KhachHang(maKh, tenKH, diaChiKH, gender, sdtKH);
+                bool result = customerBUS.AddCustomerBUS(cus);
+
+                if (result == true)
+                {
+                    MessageBox.Show("Thêm thành công!");
+                }
+                else
+                    MessageBox.Show("Thêm thất bại!");
+                load();
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
         }
-       
+
+        private void rdoNam_CheckedChanged(object sender, EventArgs e)
+        {
+            gender = "Nam";
+        }
+
+        private void rdoNu_CheckedChanged(object sender, EventArgs e)
+        {
+            gender = "Nữ";
+        }
     }
 }
