@@ -153,7 +153,7 @@
             this.btnTimKiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.ForeColor = System.Drawing.Color.Black;
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnTimKiem.Location = new System.Drawing.Point(311, 16);
             this.btnTimKiem.Name = "btnTimKiem";

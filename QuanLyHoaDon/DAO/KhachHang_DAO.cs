@@ -102,7 +102,8 @@ namespace DAO
         {
             Connect();
             List<KhachHang> list = new List<KhachHang>();
-            string sql = "select * from KHACHHANG where MaKH like '%"+valueToSearch+"%'";
+            
+            string sql = "select * from KHACHHANG where MaKH like N'%"+valueToSearch+"%'";
             
             SqlDataReader dr = myExecuteReader(sql);
             string maKh, tenKh, diaChi, gioiTinh, soDt;
@@ -118,8 +119,28 @@ namespace DAO
             }
             dr.Close();
             return list;
-            
-          
+        }
+        public List<KhachHang> SearchByName(string valueToSearch)
+        {
+            Connect();
+            List<KhachHang> list = new List<KhachHang>();
+
+            string sql = "select * from KHACHHANG where TenKH like N'%" + valueToSearch + "%'";
+
+            SqlDataReader dr = myExecuteReader(sql);
+            string maKh, tenKh, diaChi, gioiTinh, soDt;
+            while (dr.Read())
+            {
+                maKh = dr.GetString(0);
+                tenKh = dr.GetString(1);
+                diaChi = dr.GetString(2);
+                gioiTinh = dr.GetString(3);
+                soDt = dr.GetString(4);
+                KhachHang kh = new KhachHang(maKh, tenKh, diaChi, gioiTinh, soDt);
+                list.Add(kh);
+            }
+            dr.Close();
+            return list;
         }
     }
 }

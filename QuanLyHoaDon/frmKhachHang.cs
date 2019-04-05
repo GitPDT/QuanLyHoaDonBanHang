@@ -154,7 +154,14 @@ namespace QuanLyHoaDon
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             string valueToSearch = txtTimKiem.Text;
-            dgvKhachHang.DataSource = customerBUS.SearchByID(valueToSearch);
+            if (rdoID.Checked)
+            {
+                dgvKhachHang.DataSource = customerBUS.SearchByID(valueToSearch);
+            }
+            else
+            {
+                dgvKhachHang.DataSource = customerBUS.SearchByName(valueToSearch);
+            }
         }
     }
 }
