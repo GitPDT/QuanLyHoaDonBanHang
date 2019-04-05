@@ -163,5 +163,11 @@ namespace QuanLyHoaDon
                 dgvKhachHang.DataSource = customerBUS.SearchByName(valueToSearch);
             }
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            txtTimKiem.Text = "";
+            LoadCus();
+        }
     }
 }
