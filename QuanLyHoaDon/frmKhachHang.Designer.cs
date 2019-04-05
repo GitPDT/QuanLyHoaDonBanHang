@@ -51,8 +51,8 @@
             this.txtTenKH = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rdoName = new System.Windows.Forms.RadioButton();
+            this.rdoID = new System.Windows.Forms.RadioButton();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
@@ -161,6 +161,7 @@
             this.btnTimKiem.TabIndex = 2;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // groupBox1
             // 
@@ -290,8 +291,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.rdoName);
+            this.groupBox2.Controls.Add(this.rdoID);
             this.groupBox2.Controls.Add(this.btnEdit);
             this.groupBox2.Controls.Add(this.btnDelete);
             this.groupBox2.Controls.Add(this.btnAddCus);
@@ -303,29 +304,29 @@
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
-            // radioButton2
+            // rdoName
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(171, 49);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(131, 20);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.Text = "Tìm kiếm theo tên";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdoName.AutoSize = true;
+            this.rdoName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoName.Location = new System.Drawing.Point(171, 49);
+            this.rdoName.Name = "rdoName";
+            this.rdoName.Size = new System.Drawing.Size(131, 20);
+            this.rdoName.TabIndex = 4;
+            this.rdoName.Text = "Tìm kiếm theo tên";
+            this.rdoName.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rdoID
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(14, 49);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(132, 20);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Tìm kiếm theo mã";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdoID.AutoSize = true;
+            this.rdoID.Checked = true;
+            this.rdoID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoID.Location = new System.Drawing.Point(14, 49);
+            this.rdoID.Name = "rdoID";
+            this.rdoID.Size = new System.Drawing.Size(132, 20);
+            this.rdoID.TabIndex = 4;
+            this.rdoID.TabStop = true;
+            this.rdoID.Text = "Tìm kiếm theo mã";
+            this.rdoID.UseVisualStyleBackColor = true;
             // 
             // btnEdit
             // 
@@ -403,8 +404,8 @@
         private System.Windows.Forms.RadioButton rdoNam;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdoName;
+        private System.Windows.Forms.RadioButton rdoID;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
     }

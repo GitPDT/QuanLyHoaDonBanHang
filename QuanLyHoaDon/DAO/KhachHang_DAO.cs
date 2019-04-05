@@ -8,15 +8,16 @@ using DTO;
 
 namespace DAO
 {
-    public class KhachHang_DAO:DataProvider
+    public class KhachHang_DAO : DataProvider
     {
+        
         public bool AddCustomer(KhachHang cus)
         {
             string sql = "INSERT INTO KHACHHANG(MaKH, TenKH, DiaChi, GioiTinh, SoDienThoai) VALUES('"
-                + cus.MaKH + "' , N'" + cus.TenKH + "' , N'" + cus.DiaChi + "' , N'" + cus.GioiTinh + "' , '" + cus.SDT+"')";
+                + cus.MaKH + "' , N'" + cus.TenKH + "' , N'" + cus.DiaChi + "' , N'" + cus.GioiTinh + "' , '" + cus.SDT + "')";
             try
             {
-                int number =  myExecuteNoneQuery(sql);
+                int number = myExecuteNoneQuery(sql);
                 if (number > 0)
                 {
                     return true;
@@ -60,7 +61,7 @@ namespace DAO
         }
         public bool Delete(string id)
         {
-            string sql = "DELETE FROM KHACHHANG WHERE MaKH = '" + id +"'";
+            string sql = "DELETE FROM KHACHHANG WHERE MaKH = '" + id + "'";
             int numberOfRow = myExecuteNoneQuery(sql);
             try
             {
@@ -76,11 +77,11 @@ namespace DAO
 
                 throw ex;
             }
-            
+
         }
         public bool UpdateCustomer(KhachHang sup)
         {
-            string sql = "UPDATE KHACHHANG SET  TenKH = '"+ sup.TenKH +"', DiaChi = '"+sup.DiaChi+"', GioiTinh = '"+sup.GioiTinh+"', SoDienThoai = '"+sup.SDT+"' WHERE MaKH = '"+sup.MaKH+"'";
+            string sql = "UPDATE KHACHHANG SET  TenKH = '" + sup.TenKH + "', DiaChi = '" + sup.DiaChi + "', GioiTinh = '" + sup.GioiTinh + "', SoDienThoai = '" + sup.SDT + "' WHERE MaKH = '" + sup.MaKH + "'";
             int numberOfRow = myExecuteNoneQuery(sql);
             try
             {
@@ -93,8 +94,32 @@ namespace DAO
             }
             catch (SqlException ex)
             {
-                throw ex; 
+                throw ex;
             }
+        }
+      
+        public List<KhachHang> SearchByID(string valueToSearch)
+        {
+            Connect();
+            List<KhachHang> list = new List<KhachHang>();
+            string sql = "select * from KHACHHANG where MaKH like '%"+valueToSearch+"%'";
+            
+            SqlDataReader dr = myExecuteReader(sql);
+            string maKh, tenKh, diaChi, gioiTinh, soDt;
+            while(dr.Read())
+            {
+                maKh = dr.GetString(0);
+                tenKh = dr.GetString(1);
+                diaChi = dr.GetString(2);
+                gioiTinh = dr.GetString(3);
+                soDt = dr.GetString(4);
+                KhachHang kh = new KhachHang(maKh, tenKh, diaChi, gioiTinh, soDt);
+                list.Add(kh);
+            }
+            dr.Close();
+            return list;
+            
+          
         }
     }
 }

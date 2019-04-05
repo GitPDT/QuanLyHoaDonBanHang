@@ -42,5 +42,9 @@ namespace BUS
         {
             return khachHangDAO.UpdateCustomer(cus);
         }
+        public List<KhachHang> SearchByID(string valueToSearch)
+        {
+            return khachHangDAO.SearchByID(valueToSearch);
+        }
     }
 }

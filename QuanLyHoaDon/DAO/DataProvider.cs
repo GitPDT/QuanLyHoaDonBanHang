@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace DAO
 {
@@ -67,7 +68,7 @@ namespace DAO
         public int myExecuteNoneQuery(string sql)
         {
             SqlCommand cmd = new SqlCommand(sql, cn);
-            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandType = CommandType.Text;
 
             Connect();
             try
@@ -87,7 +88,7 @@ namespace DAO
         public int myEXecuteScalar(string sql)
         {
             SqlCommand cmd = new SqlCommand(sql, cn);
-            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandType = CommandType.Text;
 
             Connect();
             try
@@ -108,7 +109,7 @@ namespace DAO
         public SqlDataReader myExecuteReader(string sql)
         {
             SqlCommand cmd = new SqlCommand(sql, cn);
-            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandType = CommandType.Text;
 
             Connect();
             try
@@ -119,9 +120,16 @@ namespace DAO
             {
                 throw ex;
             }
-
-
-
+        }
+        public DataTable GetTable(string sql)
+        {
+            SqlDataAdapter da = new SqlDataAdapter(sql, cn);
+            DataTable dt = new DataTable();
+            int numberOfRows = da.Fill(dt);
+            if (numberOfRows > 0)
+                return dt;
+            else
+                return null;
         }
     }
 }

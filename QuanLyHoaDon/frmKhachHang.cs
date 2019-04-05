@@ -150,5 +150,11 @@ namespace QuanLyHoaDon
                 throw ex;
             }
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string valueToSearch = txtTimKiem.Text;
+            dgvKhachHang.DataSource = customerBUS.SearchByID(valueToSearch);
+        }
     }
 }
