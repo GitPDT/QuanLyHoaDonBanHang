@@ -140,6 +140,8 @@
             // 
             // txtTimKiem
             // 
+            this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.Location = new System.Drawing.Point(15, 16);
@@ -150,6 +152,7 @@
             // 
             // btnTimKiem
             // 
+            this.btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTimKiem.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnTimKiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -292,6 +295,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.btnRefresh);
             this.groupBox2.Controls.Add(this.rdoName);
             this.groupBox2.Controls.Add(this.rdoID);
@@ -308,6 +313,8 @@
             // 
             // rdoName
             // 
+            this.rdoName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.rdoName.AutoSize = true;
             this.rdoName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoName.Location = new System.Drawing.Point(171, 49);
@@ -319,6 +326,8 @@
             // 
             // rdoID
             // 
+            this.rdoID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.rdoID.AutoSize = true;
             this.rdoID.Checked = true;
             this.rdoID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -360,6 +369,7 @@
             // 
             // btnRefresh
             // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
             this.btnRefresh.BackgroundImage = global::QuanLyHoaDon.Properties.Resources.refresh;
             this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;

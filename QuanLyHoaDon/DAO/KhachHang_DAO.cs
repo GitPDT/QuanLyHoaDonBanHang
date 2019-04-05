@@ -81,7 +81,7 @@ namespace DAO
         }
         public bool UpdateCustomer(KhachHang sup)
         {
-            string sql = "UPDATE KHACHHANG SET  TenKH = '" + sup.TenKH + "', DiaChi = '" + sup.DiaChi + "', GioiTinh = '" + sup.GioiTinh + "', SoDienThoai = '" + sup.SDT + "' WHERE MaKH = '" + sup.MaKH + "'";
+            string sql = "UPDATE KHACHHANG SET  TenKH = N'" + sup.TenKH + "', DiaChi = N'" + sup.DiaChi + "', GioiTinh = N'" + sup.GioiTinh + "', SoDienThoai = '" + sup.SDT + "' WHERE MaKH = '" + sup.MaKH + "'";
             int numberOfRow = myExecuteNoneQuery(sql);
             try
             {
