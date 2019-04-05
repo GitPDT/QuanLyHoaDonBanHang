@@ -117,5 +117,38 @@ namespace QuanLyHoaDon
             LoadCus();
             Clear();
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string maKh = txtMaKH.Text;
+                string tenKH = txtTenKH.Text;
+                string diaChiKH = txtDiaChi.Text;
+                string sdtKH = txtSDT.Text;
+                if (rdoNam.Checked == true)
+                {
+                    gender = "Nam";
+                }
+                else
+                    gender = "Nữ";
+                KhachHang cus = new KhachHang(maKh, tenKH, diaChiKH, gender, sdtKH);
+                bool result = customerBUS.UpdateCustomer(cus);
+
+                if (result == true)
+                {
+                    MessageBox.Show("Sửa thành công!");
+                }
+                else
+                    MessageBox.Show("Không thể sửa mã khách hàng!");
+                LoadCus();
+                Clear();
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

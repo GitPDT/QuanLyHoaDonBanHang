@@ -38,5 +38,9 @@ namespace BUS
         {
             return khachHangDAO.Delete(id);
         }
+        public bool UpdateCustomer(KhachHang cus)
+        {
+            return khachHangDAO.UpdateCustomer(cus);
+        }
     }
 }

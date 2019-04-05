@@ -62,12 +62,39 @@ namespace DAO
         {
             string sql = "DELETE FROM KHACHHANG WHERE MaKH = '" + id +"'";
             int numberOfRow = myExecuteNoneQuery(sql);
-            if (numberOfRow > 0)
+            try
             {
-                return true;
+                if (numberOfRow > 0)
+                {
+                    return true;
+                }
+                else
+                    return false;
             }
-            else
-                return false;
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+            
+        }
+        public bool UpdateCustomer(KhachHang sup)
+        {
+            string sql = "UPDATE KHACHHANG SET  TenKH = '"+ sup.TenKH +"', DiaChi = '"+sup.DiaChi+"', GioiTinh = '"+sup.GioiTinh+"', SoDienThoai = '"+sup.SDT+"' WHERE MaKH = '"+sup.MaKH+"'";
+            int numberOfRow = myExecuteNoneQuery(sql);
+            try
+            {
+                if (numberOfRow > 0)
+                {
+                    return true;
+                }
+                else
+                    return false;
+            }
+            catch (SqlException ex)
+            {
+                throw ex; 
+            }
         }
     }
 }

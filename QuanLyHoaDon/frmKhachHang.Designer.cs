@@ -339,6 +339,7 @@
             this.btnEdit.TabIndex = 3;
             this.btnEdit.Text = "SỬA";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
