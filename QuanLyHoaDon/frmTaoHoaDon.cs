@@ -7,16 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
+using DTO;
 
 namespace QuanLyHoaDon
 {
     public partial class frmTaoHoaDon : Form
     {
+        DataTable dt = new DataTable();
+        HoaDon_BUS HoaDonBUS = new HoaDon_BUS();
         public frmTaoHoaDon()
         {
             InitializeComponent();
         }
-
+        public void ShowHoaDon()
+        {
+            dt = HoaDonBUS.ShowHoaDon();
+            dgvHoaDon.DataSource = dt;
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -30,6 +38,7 @@ namespace QuanLyHoaDon
         private void frmTaoHoaDon_Load(object sender, EventArgs e)
         {
             txtMaHD.Select();
+            ShowHoaDon();
         }
 
         private void label1_Click(object sender, EventArgs e)

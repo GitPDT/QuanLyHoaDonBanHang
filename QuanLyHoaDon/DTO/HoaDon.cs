@@ -39,7 +39,6 @@ namespace DTO
             this.ThanhTien = thanhTien;
             this.DaTra = daTra;
             this.ConNo = conNo;
-
         }
     }
 }
