@@ -14,6 +14,7 @@ namespace DTO
         public string TenKH { get; set; }
         public string DiaChi { get; set; }
         public string SDT { get; set; }
+        public string MaHH { get; set; }
         public string TenHH { get; set; }
         public int SoLuong { get; set; }
         public string DonViTinh { get; set; }
@@ -22,7 +23,7 @@ namespace DTO
         public float ThanhTien { get; set; }
         public float DaTra { get; set; }
         public float ConNo { get; set; }
-        public HoaDon(string maHD, DateTime ngay, string maKH, string tenKH, string diaChi, string sdt, string tenHH,
+        public HoaDon(string maHD, DateTime ngay, string maKH, string tenKH, string diaChi, string sdt,string maHH, string tenHH,
            int soLuong, string dvt, float donGia, float chietKhau, float thanhTien, float daTra, float conNo )
         {
             this.MaHD = maHD;
@@ -31,6 +32,7 @@ namespace DTO
             this.TenKH = tenKH;
             this.DiaChi = diaChi;
             this.SDT = sdt;
+            this.MaHH = maHH;
             this.TenHH = tenHH;
             this.SoLuong = soLuong;
             this.DonViTinh = dvt;

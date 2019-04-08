@@ -45,12 +45,6 @@ namespace QuanLyHoaDon
         {
 
         }
-
-        private void btKhoiTao_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtThanhTien_TextChanged(object sender, EventArgs e)
         {
 
