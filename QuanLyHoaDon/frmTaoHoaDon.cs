@@ -15,7 +15,7 @@ namespace QuanLyHoaDon
 {
     public partial class frmTaoHoaDon : Form
     {
-        DataTable dt = new DataTable();
+        List<HoaDon> dt = new List<HoaDon>();
         HoaDon_BUS HoaDonBUS = new HoaDon_BUS();
         public frmTaoHoaDon()
         {

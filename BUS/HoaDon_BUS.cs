@@ -13,9 +13,17 @@ namespace BUS
     public class HoaDon_BUS
     {
         HoaDon_DAO HoaDonDAO = new HoaDon_DAO();
-        public DataTable ShowHoaDon()
+        public List<HoaDon> ShowHoaDon()
         {
-            return HoaDonDAO.LoadHoaDon();
+            try
+            {
+                return HoaDonDAO.ShowHoaDon();
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
         }
         public bool AddHoaDon(HoaDon hd)
         {

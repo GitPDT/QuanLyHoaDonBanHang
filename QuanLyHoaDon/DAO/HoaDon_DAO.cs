@@ -11,10 +11,44 @@ namespace DAO
 {
     public class HoaDon_DAO : DataProvider
     {
-        public DataTable LoadHoaDon()
+        public List<HoaDon> ShowHoaDon()
         {
             string sql = "SELECT * FROM HOADON";
-            return GetTable(sql);
+            try
+            {
+                List<HoaDon> list = new List<HoaDon>();
+                SqlDataReader reader = myExecuteReader(sql);
+                while (reader.Read())
+                {
+                    string maHD = reader[0].ToString();
+                    DateTime ngay = DateTime.Parse(reader[1].ToString());
+                    string tenKH = reader[2].ToString();
+                    string diaChi = reader[3].ToString();
+                    string sdt = reader[4].ToString();
+                    string maHH = reader[5].ToString();
+                    string tenHH = reader[6].ToString();
+                    int soLuong = int.Parse(reader[7].ToString());
+                    string dvt = reader[8].ToString();
+                    int donGia = int.Parse(reader[9].ToString());
+                    int chietKhau = int.Parse(reader[10].ToString());
+                    int thanhTien = int.Parse(reader[11].ToString());
+                    int daTra = int.Parse(reader[12].ToString());
+                    int conNo = int.Parse(reader[13].ToString());
+
+                    HoaDon hd = new HoaDon(maHD,ngay,tenKH,diaChi,sdt,maHH,tenHH,soLuong,dvt,donGia,chietKhau, thanhTien, daTra, conNo);
+                    list.Add(hd);
+                }
+                return list;
+
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Disconnect();
+            }
         }
         public bool AddHoaDon(HoaDon hoadon)
         {
