@@ -10,7 +10,7 @@ namespace DTO
     {
         public string MaHD { get; set; }
         public DateTime Ngay { get; set; }
-        public string MaKH { get; set; }
+       
         public string TenKH { get; set; }
         public string DiaChi { get; set; }
         public string SDT { get; set; }
@@ -18,17 +18,17 @@ namespace DTO
         public string TenHH { get; set; }
         public int SoLuong { get; set; }
         public string DonViTinh { get; set; }
-        public float DonGia { get; set; }
-        public float ChietKhau { get; set; }
-        public float ThanhTien { get; set; }
-        public float DaTra { get; set; }
-        public float ConNo { get; set; }
-        public HoaDon(string maHD, DateTime ngay, string maKH, string tenKH, string diaChi, string sdt,string maHH, string tenHH,
-           int soLuong, string dvt, float donGia, float chietKhau, float thanhTien, float daTra, float conNo )
+        public int DonGia { get; set; }
+        public int ChietKhau { get; set; }
+        public int ThanhTien { get; set; }
+        public int DaTra { get; set; }
+        public int ConNo { get; set; }
+        public HoaDon(string maHD, DateTime ngay, string tenKH, string diaChi, string sdt,string maHH, string tenHH,
+           int soLuong, string dvt, int donGia, int chietKhau, int thanhTien, int daTra, int conNo )
         {
             this.MaHD = maHD;
             this.Ngay = ngay;
-            this.MaKH = maKH;
+            
             this.TenKH = tenKH;
             this.DiaChi = diaChi;
             this.SDT = sdt;

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using System.Data.SqlClient;
 
 namespace QuanLyHoaDon
 {
@@ -25,44 +26,45 @@ namespace QuanLyHoaDon
             dt = HoaDonBUS.ShowHoaDon();
             dgvHoaDon.DataSource = dt;
         }
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmTaoHoaDon_Load(object sender, EventArgs e)
+        private void FrmTaoHoaDon_Load(object sender, EventArgs e)
         {
             txtMaHD.Select();
             ShowHoaDon();
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void BtnThem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string maHD = txtMaHD.Text;
+                DateTime ngay = DateTime.Parse(txtNgay.Value.ToString());
+                string tenKH = txtTenKH.Text.ToString();
+                string diaChi = txtDiaChi.Text.ToString();
+                string sdt = txtSdt.Text.ToString();
+                string maHH = txtMaHH.Text;
+                string tenHH = cmbTenHH.Text;
 
-        }
-        private void txtThanhTien_TextChanged(object sender, EventArgs e)
-        {
+                int soLuong = int.Parse(txtSoLuong.Text);
+                string dvt = txtDvt.Text.ToString();
+                int donGia = int.Parse(txtDonGia.Text);
+                int chietKhau = int.Parse(txtChietKhau.Text);
+                int thanhTien = int.Parse(txtThanhTien.Text);
+                int daTra = int.Parse(txtDaTra.Text);
+                int conNo = int.Parse(txtConNo.Text);
+                HoaDon hd = new HoaDon(maHD,ngay,tenKH,diaChi,sdt,maHH,tenHH,soLuong,dvt,donGia,chietKhau,thanhTien,daTra,conNo);
+                bool kq = HoaDonBUS.AddHoaDon(hd);
+                if (kq)
+                {
+                    MessageBox.Show("Thêm thành công!");
+                }
+                else
+                    MessageBox.Show("Thêm thất bại!");
+                ShowHoaDon();
+            }
+            catch (SqlException ex)
+            {
 
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
+                throw ex;
+            }
         }
     }
 }

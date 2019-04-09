@@ -17,5 +17,16 @@ namespace BUS
         {
             return HoaDonDAO.LoadHoaDon();
         }
+        public bool AddHoaDon(HoaDon hd)
+        {
+            try
+            {
+                return HoaDonDAO.AddHoaDon(hd);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
