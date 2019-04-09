@@ -43,7 +43,7 @@ namespace QuanLyHoaDon
                 string maHH = txtMaHH.Text;
                 string tenHH = cmbTenHH.Text;
 
-                int soLuong = int.Parse(txtSoLuong.Text);
+                int soLuong = int.Parse(numSoLg.Value.ToString());
                 string dvt = txtDvt.Text.ToString();
                 int donGia = int.Parse(txtDonGia.Text);
                 int chietKhau = int.Parse(txtChietKhau.Text);
@@ -72,14 +72,7 @@ namespace QuanLyHoaDon
             //
         }
 
-        private void txtSoLuong_TextChanged(object sender, EventArgs e)
-        {
-            
-            int a = int.Parse(txtDonGia.Text) * int.Parse(txtSoLuong.Text);
-            int b = a - (a * int.Parse(txtChietKhau.Text) / 100);
-            txtThanhTien.Text = b.ToString();
-        }
-
+       
         private void txtDaTra_TextChanged(object sender, EventArgs e)
         {
             
@@ -93,7 +86,26 @@ namespace QuanLyHoaDon
 
         private void txtChietKhau_TextChanged(object sender, EventArgs e)
         {
-            int a = int.Parse(txtDonGia.Text) * int.Parse(txtSoLuong.Text);
+            int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
+            int b = a - (a * int.Parse(txtChietKhau.Text) / 100);
+            txtThanhTien.Text = b.ToString();
+        }
+
+        private void txtDonGia_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+        //event value changed
+        private void NumSoLg_ValueChanged(object sender, EventArgs e)
+        {
+            int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
+            int b = a - (a * int.Parse(txtChietKhau.Text) / 100);
+            txtThanhTien.Text = b.ToString();
+        }
+        //event enter
+        private void NumSoLg_Enter(object sender, EventArgs e)
+        {
+            int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
             int b = a - (a * int.Parse(txtChietKhau.Text) / 100);
             txtThanhTien.Text = b.ToString();
         }

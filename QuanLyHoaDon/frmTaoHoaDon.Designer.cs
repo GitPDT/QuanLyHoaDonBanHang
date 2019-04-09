@@ -83,7 +83,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtChietKhau = new System.Windows.Forms.TextBox();
             this.txtMaHH = new System.Windows.Forms.TextBox();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.txtDvt = new System.Windows.Forms.TextBox();
             this.txtConNo = new System.Windows.Forms.TextBox();
             this.txtDaTra = new System.Windows.Forms.TextBox();
@@ -91,6 +90,7 @@
             this.txtNgay = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.numSoLg = new System.Windows.Forms.NumericUpDown();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -99,6 +99,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numSoLg)).BeginInit();
             this.SuspendLayout();
             // 
             // lbTenKH
@@ -196,7 +197,7 @@
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(183, 22);
             this.txtDonGia.TabIndex = 8;
-            this.txtDonGia.Text = "0";
+            this.txtDonGia.TextChanged += new System.EventHandler(this.txtDonGia_TextChanged);
             // 
             // label7
             // 
@@ -518,6 +519,7 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.numSoLg);
             this.groupBox2.Controls.Add(this.txtDonGia);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label16);
@@ -534,7 +536,6 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.txtChietKhau);
             this.groupBox2.Controls.Add(this.txtMaHH);
-            this.groupBox2.Controls.Add(this.txtSoLuong);
             this.groupBox2.Controls.Add(this.txtDvt);
             this.groupBox2.Controls.Add(this.txtConNo);
             this.groupBox2.Controls.Add(this.txtDaTra);
@@ -641,7 +642,6 @@
             this.txtChietKhau.Name = "txtChietKhau";
             this.txtChietKhau.Size = new System.Drawing.Size(183, 22);
             this.txtChietKhau.TabIndex = 9;
-            this.txtChietKhau.Text = "0";
             this.txtChietKhau.TextChanged += new System.EventHandler(this.txtChietKhau_TextChanged);
             // 
             // txtMaHH
@@ -651,16 +651,6 @@
             this.txtMaHH.Name = "txtMaHH";
             this.txtMaHH.Size = new System.Drawing.Size(139, 22);
             this.txtMaHH.TabIndex = 9;
-            // 
-            // txtSoLuong
-            // 
-            this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoLuong.Location = new System.Drawing.Point(96, 48);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(139, 22);
-            this.txtSoLuong.TabIndex = 9;
-            this.txtSoLuong.Text = "0";
-            this.txtSoLuong.TextChanged += new System.EventHandler(this.txtSoLuong_TextChanged);
             // 
             // txtDvt
             // 
@@ -746,6 +736,21 @@
             this.tabControl1.Size = new System.Drawing.Size(921, 464);
             this.tabControl1.TabIndex = 11;
             // 
+            // numSoLg
+            // 
+            this.numSoLg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numSoLg.Location = new System.Drawing.Point(96, 48);
+            this.numSoLg.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numSoLg.Name = "numSoLg";
+            this.numSoLg.Size = new System.Drawing.Size(139, 22);
+            this.numSoLg.TabIndex = 12;
+            this.numSoLg.ValueChanged += new System.EventHandler(this.NumSoLg_ValueChanged);
+            this.numSoLg.Enter += new System.EventHandler(this.NumSoLg_Enter);
+            // 
             // frmTaoHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -767,6 +772,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numSoLg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -835,6 +841,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtMaHH;
-        private System.Windows.Forms.TextBox txtSoLuong;
+        private System.Windows.Forms.NumericUpDown numSoLg;
     }
 }
