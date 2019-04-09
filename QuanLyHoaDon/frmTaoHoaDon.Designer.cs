@@ -196,6 +196,7 @@
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(183, 22);
             this.txtDonGia.TabIndex = 8;
+            this.txtDonGia.Text = "0";
             // 
             // label7
             // 
@@ -217,11 +218,16 @@
             // 
             // txtThanhTien
             // 
-            this.txtThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThanhTien.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThanhTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.txtThanhTien.Location = new System.Drawing.Point(96, 148);
             this.txtThanhTien.Name = "txtThanhTien";
+            this.txtThanhTien.ReadOnly = true;
             this.txtThanhTien.Size = new System.Drawing.Size(186, 22);
             this.txtThanhTien.TabIndex = 9;
+            this.txtThanhTien.Text = "0";
+            this.txtThanhTien.TextChanged += new System.EventHandler(this.txtThanhTien_TextChanged);
             // 
             // label9
             // 
@@ -635,6 +641,8 @@
             this.txtChietKhau.Name = "txtChietKhau";
             this.txtChietKhau.Size = new System.Drawing.Size(183, 22);
             this.txtChietKhau.TabIndex = 9;
+            this.txtChietKhau.Text = "0";
+            this.txtChietKhau.TextChanged += new System.EventHandler(this.txtChietKhau_TextChanged);
             // 
             // txtMaHH
             // 
@@ -651,6 +659,8 @@
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(139, 22);
             this.txtSoLuong.TabIndex = 9;
+            this.txtSoLuong.Text = "0";
+            this.txtSoLuong.TextChanged += new System.EventHandler(this.txtSoLuong_TextChanged);
             // 
             // txtDvt
             // 
@@ -662,11 +672,15 @@
             // 
             // txtConNo
             // 
-            this.txtConNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConNo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtConNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConNo.ForeColor = System.Drawing.Color.Red;
             this.txtConNo.Location = new System.Drawing.Point(286, 181);
             this.txtConNo.Name = "txtConNo";
+            this.txtConNo.ReadOnly = true;
             this.txtConNo.Size = new System.Drawing.Size(139, 22);
             this.txtConNo.TabIndex = 9;
+            this.txtConNo.Text = "0";
             // 
             // txtDaTra
             // 
@@ -675,6 +689,7 @@
             this.txtDaTra.Name = "txtDaTra";
             this.txtDaTra.Size = new System.Drawing.Size(139, 22);
             this.txtDaTra.TabIndex = 9;
+            this.txtDaTra.TextChanged += new System.EventHandler(this.txtDaTra_TextChanged);
             // 
             // groupBox1
             // 

@@ -66,5 +66,36 @@ namespace QuanLyHoaDon
                 throw ex;
             }
         }
+
+        private void txtThanhTien_TextChanged(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void txtSoLuong_TextChanged(object sender, EventArgs e)
+        {
+            
+            int a = int.Parse(txtDonGia.Text) * int.Parse(txtSoLuong.Text);
+            int b = a - (a * int.Parse(txtChietKhau.Text) / 100);
+            txtThanhTien.Text = b.ToString();
+        }
+
+        private void txtDaTra_TextChanged(object sender, EventArgs e)
+        {
+            
+            if(txtDaTra.Text =="")
+            {
+                txtDaTra.Text = "";
+            }
+            int a = int.Parse(txtThanhTien.Text) - int.Parse(txtDaTra.Text);
+            txtConNo.Text = a.ToString();
+        }
+
+        private void txtChietKhau_TextChanged(object sender, EventArgs e)
+        {
+            int a = int.Parse(txtDonGia.Text) * int.Parse(txtSoLuong.Text);
+            int b = a - (a * int.Parse(txtChietKhau.Text) / 100);
+            txtThanhTien.Text = b.ToString();
+        }
     }
 }
