@@ -72,6 +72,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.numSoLg = new System.Windows.Forms.NumericUpDown();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -81,25 +82,26 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtChietKhau = new System.Windows.Forms.TextBox();
             this.txtMaHH = new System.Windows.Forms.TextBox();
             this.txtDvt = new System.Windows.Forms.TextBox();
             this.txtConNo = new System.Windows.Forms.TextBox();
-            this.txtDaTra = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtNgay = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.numSoLg = new System.Windows.Forms.NumericUpDown();
+            this.numDaTra = new System.Windows.Forms.NumericUpDown();
+            this.numChietKhau = new System.Windows.Forms.NumericUpDown();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numSoLg)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numSoLg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDaTra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numChietKhau)).BeginInit();
             this.SuspendLayout();
             // 
             // lbTenKH
@@ -519,6 +521,8 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.numDaTra);
+            this.groupBox2.Controls.Add(this.numChietKhau);
             this.groupBox2.Controls.Add(this.numSoLg);
             this.groupBox2.Controls.Add(this.txtDonGia);
             this.groupBox2.Controls.Add(this.label5);
@@ -534,11 +538,9 @@
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.txtChietKhau);
             this.groupBox2.Controls.Add(this.txtMaHH);
             this.groupBox2.Controls.Add(this.txtDvt);
             this.groupBox2.Controls.Add(this.txtConNo);
-            this.groupBox2.Controls.Add(this.txtDaTra);
             this.groupBox2.Controls.Add(this.txtThanhTien);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(477, 12);
@@ -547,6 +549,21 @@
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết hóa đơn";
+            // 
+            // numSoLg
+            // 
+            this.numSoLg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numSoLg.Location = new System.Drawing.Point(96, 48);
+            this.numSoLg.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numSoLg.Name = "numSoLg";
+            this.numSoLg.Size = new System.Drawing.Size(139, 22);
+            this.numSoLg.TabIndex = 12;
+            this.numSoLg.ValueChanged += new System.EventHandler(this.NumSoLg_ValueChanged);
+            this.numSoLg.Enter += new System.EventHandler(this.NumSoLg_Enter);
             // 
             // label16
             // 
@@ -635,15 +652,6 @@
             this.label11.TabIndex = 2;
             this.label11.Text = "Đã trả";
             // 
-            // txtChietKhau
-            // 
-            this.txtChietKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChietKhau.Location = new System.Drawing.Point(96, 115);
-            this.txtChietKhau.Name = "txtChietKhau";
-            this.txtChietKhau.Size = new System.Drawing.Size(183, 22);
-            this.txtChietKhau.TabIndex = 9;
-            this.txtChietKhau.TextChanged += new System.EventHandler(this.txtChietKhau_TextChanged);
-            // 
             // txtMaHH
             // 
             this.txtMaHH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -671,15 +679,6 @@
             this.txtConNo.Size = new System.Drawing.Size(139, 22);
             this.txtConNo.TabIndex = 9;
             this.txtConNo.Text = "0";
-            // 
-            // txtDaTra
-            // 
-            this.txtDaTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDaTra.Location = new System.Drawing.Point(96, 181);
-            this.txtDaTra.Name = "txtDaTra";
-            this.txtDaTra.Size = new System.Drawing.Size(139, 22);
-            this.txtDaTra.TabIndex = 9;
-            this.txtDaTra.TextChanged += new System.EventHandler(this.txtDaTra_TextChanged);
             // 
             // groupBox1
             // 
@@ -736,20 +735,40 @@
             this.tabControl1.Size = new System.Drawing.Size(921, 464);
             this.tabControl1.TabIndex = 11;
             // 
-            // numSoLg
+            // numDaTra
             // 
-            this.numSoLg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numSoLg.Location = new System.Drawing.Point(96, 48);
-            this.numSoLg.Maximum = new decimal(new int[] {
-            10000,
+            this.numDaTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numDaTra.Increment = new decimal(new int[] {
+            1000,
             0,
             0,
             0});
-            this.numSoLg.Name = "numSoLg";
-            this.numSoLg.Size = new System.Drawing.Size(139, 22);
-            this.numSoLg.TabIndex = 12;
-            this.numSoLg.ValueChanged += new System.EventHandler(this.NumSoLg_ValueChanged);
-            this.numSoLg.Enter += new System.EventHandler(this.NumSoLg_Enter);
+            this.numDaTra.Location = new System.Drawing.Point(96, 182);
+            this.numDaTra.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.numDaTra.Name = "numDaTra";
+            this.numDaTra.Size = new System.Drawing.Size(139, 22);
+            this.numDaTra.TabIndex = 12;
+            this.numDaTra.ValueChanged += new System.EventHandler(this.numDaTra_ValueChanged);
+            this.numDaTra.Enter += new System.EventHandler(this.numDaTra_Enter);
+            // 
+            // numChietKhau
+            // 
+            this.numChietKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numChietKhau.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numChietKhau.Location = new System.Drawing.Point(96, 116);
+            this.numChietKhau.Name = "numChietKhau";
+            this.numChietKhau.Size = new System.Drawing.Size(139, 22);
+            this.numChietKhau.TabIndex = 12;
+            this.numChietKhau.ValueChanged += new System.EventHandler(this.numChietKhau_ValueChanged);
+            this.numChietKhau.Enter += new System.EventHandler(this.numChietKhau_Enter);
             // 
             // frmTaoHoaDon
             // 
@@ -769,10 +788,12 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numSoLg)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numSoLg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDaTra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numChietKhau)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -806,8 +827,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtChietKhau;
-        private System.Windows.Forms.TextBox txtDaTra;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
@@ -842,5 +861,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtMaHH;
         private System.Windows.Forms.NumericUpDown numSoLg;
+        private System.Windows.Forms.NumericUpDown numDaTra;
+        private System.Windows.Forms.NumericUpDown numChietKhau;
     }
 }

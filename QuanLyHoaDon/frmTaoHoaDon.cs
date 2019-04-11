@@ -46,9 +46,9 @@ namespace QuanLyHoaDon
                 int soLuong = int.Parse(numSoLg.Value.ToString());
                 string dvt = txtDvt.Text.ToString();
                 int donGia = int.Parse(txtDonGia.Text);
-                int chietKhau = int.Parse(txtChietKhau.Text);
+                int chietKhau = int.Parse(numChietKhau.Text);
                 int thanhTien = int.Parse(txtThanhTien.Text);
-                int daTra = int.Parse(txtDaTra.Text);
+                int daTra = int.Parse(numDaTra.Text);
                 int conNo = int.Parse(txtConNo.Text);
                 HoaDon hd = new HoaDon(maHD,ngay,tenKH,diaChi,sdt,maHH,tenHH,soLuong,dvt,donGia,chietKhau,thanhTien,daTra,conNo);
                 bool kq = HoaDonBUS.AddHoaDon(hd);
@@ -71,26 +71,6 @@ namespace QuanLyHoaDon
         {
             //
         }
-
-       
-        private void txtDaTra_TextChanged(object sender, EventArgs e)
-        {
-            
-            if(txtDaTra.Text =="")
-            {
-                txtDaTra.Text = "";
-            }
-            int a = int.Parse(txtThanhTien.Text) - int.Parse(txtDaTra.Text);
-            txtConNo.Text = a.ToString();
-        }
-
-        private void txtChietKhau_TextChanged(object sender, EventArgs e)
-        {
-            int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
-            int b = a - (a * int.Parse(txtChietKhau.Text) / 100);
-            txtThanhTien.Text = b.ToString();
-        }
-
         private void txtDonGia_TextChanged(object sender, EventArgs e)
         {
            
@@ -99,14 +79,40 @@ namespace QuanLyHoaDon
         private void NumSoLg_ValueChanged(object sender, EventArgs e)
         {
             int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
-            int b = a - (a * int.Parse(txtChietKhau.Text) / 100);
+            int b = a - (a * int.Parse(numChietKhau.Text) / 100);
             txtThanhTien.Text = b.ToString();
         }
-        //event enter
+        //event 
         private void NumSoLg_Enter(object sender, EventArgs e)
         {
             int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
-            int b = a - (a * int.Parse(txtChietKhau.Text) / 100);
+            int b = a - (a * int.Parse(numChietKhau.Text) / 100);
+            txtThanhTien.Text = b.ToString();
+        }
+
+        private void numDaTra_ValueChanged(object sender, EventArgs e)
+        {
+            int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
+            txtConNo.Text = a.ToString();
+        }
+        //event
+        private void numDaTra_Enter(object sender, EventArgs e)
+        {
+            int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
+            txtConNo.Text = a.ToString();
+        }
+
+        private void numChietKhau_ValueChanged(object sender, EventArgs e)
+        {
+            int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
+            int b = a - (a * int.Parse(numChietKhau.Text) / 100);
+            txtThanhTien.Text = b.ToString();
+        }
+
+        private void numChietKhau_Enter(object sender, EventArgs e)
+        {
+            int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
+            int b = a - (a * int.Parse(numChietKhau.Text) / 100);
             txtThanhTien.Text = b.ToString();
         }
     }
