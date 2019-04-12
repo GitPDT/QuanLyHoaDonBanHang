@@ -40,5 +40,9 @@ namespace BUS
         {
             return HoaDonDAO.DeleteHoaDon(maHD);
         }
+        public bool UpdateHoaDon(HoaDon hoadon)
+        {
+            return HoaDonDAO.UpdateHoaDon(hoadon);
+        }
     }
 }

@@ -176,6 +176,8 @@ namespace QuanLyHoaDon
 
         private void dgvHoaDon_DoubleClick(object sender, EventArgs e)
         {
+            btnXoa.Enabled = true;
+            btnSua.Enabled = true;
             if (dgvHoaDon.CurrentRow.Index != -1)
             {
                 txtMaHD.Text = dgvHoaDon.CurrentRow.Cells[0].Value.ToString();
@@ -223,6 +225,42 @@ namespace QuanLyHoaDon
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             Refresh_HD();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string maHD = txtMaHD.Text;
+                DateTime ngay = DateTime.Parse(txtNgay.Value.ToString());
+                string tenKH = txtTenKH.Text.ToString();
+                string diaChi = txtDiaChi.Text.ToString();
+                string sdt = txtSdt.Text.ToString();
+                string maHH = txtMaHH.Text;
+                string tenHH = cmbTenHH.Text;
+
+                int soLuong = int.Parse(numSoLg.Value.ToString());
+                string dvt = txtDvt.Text.ToString();
+                int donGia = int.Parse(txtDonGia.Text);
+                int chietKhau = int.Parse(numChietKhau.Text);
+                int thanhTien = int.Parse(txtThanhTien.Text);
+                int daTra = int.Parse(numDaTra.Text);
+                int conNo = int.Parse(txtConNo.Text);
+                HoaDon hd = new HoaDon(maHD, ngay, tenKH, diaChi, sdt, maHH, tenHH, soLuong, dvt, donGia, chietKhau, thanhTien, daTra, conNo);
+                bool kq = HoaDonBUS.UpdateHoaDon(hd);
+                if (kq)
+                {
+                    MessageBox.Show("Sửa thành công!");
+                }
+                else
+                    MessageBox.Show("Sửa thất bại!");
+                ShowHoaDon();
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
         }
     }
 }

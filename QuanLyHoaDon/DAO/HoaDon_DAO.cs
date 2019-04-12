@@ -76,6 +76,26 @@ namespace DAO
                 Disconnect();
             }
         }
+        public bool UpdateHoaDon(HoaDon hoadon)
+        {
+            string sql = "UPDATE HOADON SET MaHD =N'" + hoadon.MaHD + "',Ngay = N'" + hoadon.Ngay + "',TenKH = N'" + hoadon.TenKH + "',DiaChi = N'" + hoadon.DiaChi +
+                "',SDT ='" + hoadon.SDT + "',MaHH ='" + hoadon.MaHH + "',TenHH = N'" + hoadon.TenHH + "',SoLuong ='" + hoadon.SoLuong + "',DonViTinh = N'" +
+                        hoadon.DonViTinh + "',DonGia ='" + hoadon.DonGia + "',ChietKhau ='" + hoadon.ChietKhau + "',ThanhTien='" + hoadon.ThanhTien + "',DaTra='" + hoadon.DaTra + "',ConNo='" + hoadon.ConNo + "'";
+            int numberOfRow = myExecuteNoneQuery(sql);
+            try
+            {
+                if (numberOfRow > 0)
+                {
+                    return true;
+                }
+                else
+                    return false;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
         public bool DeleteHoaDon(string maHD)
         {
             string sql = "DELETE FROM HOADON WHERE MaHD = '" + maHD + "'";
