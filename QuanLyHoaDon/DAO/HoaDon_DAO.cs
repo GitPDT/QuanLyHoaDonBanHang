@@ -35,7 +35,7 @@ namespace DAO
                     int daTra = int.Parse(reader[12].ToString());
                     int conNo = int.Parse(reader[13].ToString());
 
-                    HoaDon hd = new HoaDon(maHD,ngay,tenKH,diaChi,sdt,maHH,tenHH,soLuong,dvt,donGia,chietKhau, thanhTien, daTra, conNo);
+                    HoaDon hd = new HoaDon(maHD, ngay, tenKH, diaChi, sdt, maHH, tenHH, soLuong, dvt, donGia, chietKhau, thanhTien, daTra, conNo);
                     list.Add(hd);
                 }
                 return list;
@@ -53,9 +53,9 @@ namespace DAO
         public bool AddHoaDon(HoaDon hoadon)
         {
             string sql = "INSERT INTO HOADON(MaHD, Ngay, TenKH, DiaChi, SDT, MaHH, TenHH, SoLuong, DonViTinh, DonGia, ChietKhau, ThanhTien, DaTra, ConNo) " +
-                "VALUES('"+ hoadon.MaHD +"', N'"+ hoadon.Ngay +"',N'"+ hoadon.TenKH +"',N'"+ hoadon.DiaChi +
-                "','"+ hoadon.SDT +"','"+ hoadon.MaHH+"',N'"+ hoadon.TenHH +"','" + hoadon.SoLuong +"',N'"+
-                        hoadon.DonViTinh +"','"+ hoadon.DonGia +"','"+ hoadon.ChietKhau +"','"+ hoadon.ThanhTien +"','"+ hoadon.DaTra+"','"+ hoadon.ConNo +"')";
+                "VALUES('" + hoadon.MaHD + "', N'" + hoadon.Ngay + "',N'" + hoadon.TenKH + "',N'" + hoadon.DiaChi +
+                "','" + hoadon.SDT + "','" + hoadon.MaHH + "',N'" + hoadon.TenHH + "','" + hoadon.SoLuong + "',N'" +
+                        hoadon.DonViTinh + "','" + hoadon.DonGia + "','" + hoadon.ChietKhau + "','" + hoadon.ThanhTien + "','" + hoadon.DaTra + "','" + hoadon.ConNo + "')";
             Connect();
             try
             {
@@ -74,6 +74,25 @@ namespace DAO
             finally
             {
                 Disconnect();
+            }
+        }
+        public bool DeleteHoaDon(string maHD)
+        {
+            string sql = "DELETE FROM HOADON WHERE MaHD = '" + maHD + "'";
+            int numberOfRow = myExecuteNoneQuery(sql);
+            try
+            {
+                if (numberOfRow > 0)
+                {
+                    return true;
+                }
+                else
+                    return false;
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
             }
         }
     }

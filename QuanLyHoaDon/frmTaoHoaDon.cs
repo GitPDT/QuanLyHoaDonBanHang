@@ -187,5 +187,30 @@ namespace QuanLyHoaDon
                 txtConNo.Text = dgvHoaDon.CurrentRow.Cells[13].Value.ToString();
             }
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa?", "Cảnh báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                try
+                {
+                    string id = txtMaHD.Text;
+                    bool kq = HoaDonBUS.DeleteHoaDon(id);
+                    if (kq)
+                    {
+                        ShowHoaDon();
+                        
+                    }
+                    else
+                        MessageBox.Show("Xóa thất bại!");
+
+                }
+                catch (SqlException ex)
+                {
+
+                    throw ex;
+                }
+            }
+        }
     }
 }

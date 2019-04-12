@@ -36,5 +36,9 @@ namespace BUS
                 throw ex;
             }
         }
+        public bool DeleteHoaDon(string maHD)
+        {
+            return HoaDonDAO.DeleteHoaDon(maHD);
+        }
     }
 }
