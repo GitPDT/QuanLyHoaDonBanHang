@@ -195,5 +195,45 @@ namespace DAO
                 Disconnect();
             }
         }
+        public List<HoaDon> SearchByName(string valueSearch)
+        {
+            Connect();
+            string sql = "select * from HOADON where TenKH like N'%" + valueSearch + "%'";
+            try
+            {
+                List<HoaDon> list = new List<HoaDon>();
+                SqlDataReader reader = myExecuteReader(sql);
+                while (reader.Read())
+                {
+                    string maHD = reader[0].ToString();
+                    string ngay = (reader[1].ToString());
+                    string tenKH = reader[2].ToString();
+                    string diaChi = reader[3].ToString();
+                    string sdt = reader[4].ToString();
+                    string maHH = reader[5].ToString();
+                    string tenHH = reader[6].ToString();
+                    int soLuong = int.Parse(reader[7].ToString());
+                    string dvt = reader[8].ToString();
+                    int donGia = int.Parse(reader[9].ToString());
+                    int chietKhau = int.Parse(reader[10].ToString());
+                    int thanhTien = int.Parse(reader[11].ToString());
+                    int daTra = int.Parse(reader[12].ToString());
+                    int conNo = int.Parse(reader[13].ToString());
+
+                    HoaDon hd = new HoaDon(maHD, ngay, tenKH, diaChi, sdt, maHH, tenHH, soLuong, dvt, donGia, chietKhau, thanhTien, daTra, conNo);
+                    list.Add(hd);
+                }
+                return list;
+
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
     }
 }

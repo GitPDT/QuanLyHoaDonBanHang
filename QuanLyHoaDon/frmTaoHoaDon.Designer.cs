@@ -309,6 +309,7 @@
             // rdoTen
             // 
             this.rdoTen.AutoSize = true;
+            this.rdoTen.Checked = true;
             this.rdoTen.Location = new System.Drawing.Point(507, 9);
             this.rdoTen.Name = "rdoTen";
             this.rdoTen.Size = new System.Drawing.Size(102, 17);
@@ -768,7 +769,7 @@
             this.txtNgay.Name = "txtNgay";
             this.txtNgay.Size = new System.Drawing.Size(237, 22);
             this.txtNgay.TabIndex = 1;
-            this.txtNgay.Value = new System.DateTime(2019, 4, 12, 0, 0, 0, 0);
+            this.txtNgay.Value = new System.DateTime(2019, 4, 12, 21, 55, 11, 0);
             // 
             // label4
             // 

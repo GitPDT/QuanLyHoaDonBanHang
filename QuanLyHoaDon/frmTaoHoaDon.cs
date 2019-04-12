@@ -277,6 +277,10 @@ namespace QuanLyHoaDon
             {
                 dgvHoaDon.DataSource = HoaDonBUS.SearchByDate(valueSearch);
             }
+            if (rdoTen.Checked)
+            {
+                dgvHoaDon.DataSource = HoaDonBUS.SearchByName(valueSearch);
+            }
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
