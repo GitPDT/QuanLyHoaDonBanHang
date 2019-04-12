@@ -33,6 +33,7 @@ namespace QuanLyHoaDon
             txtMaHD.Text = txtTenKH.Text = txtDiaChi.Text = txtSdt.Text = txtDvt.Text = cmbTenHH.Text = txtMaHH.Text = "";
             numChietKhau.Value = numDaTra.Value = numSoLg.Value =  0;
             txtConNo.Text = txtThanhTien.Text = txtDonGia.Text = "0";
+            ShowHoaDon();
         }
         //Them hoa don
         private void BtnThem_Click(object sender, EventArgs e)
@@ -40,7 +41,7 @@ namespace QuanLyHoaDon
             try
             {
                 string maHD = txtMaHD.Text;
-                DateTime ngay = DateTime.Parse(txtNgay.Value.ToString());
+                string ngay = (txtNgay.Value.ToString());
                 string tenKH = txtTenKH.Text.ToString();
                 string diaChi = txtDiaChi.Text.ToString();
                 string sdt = txtSdt.Text.ToString();
@@ -96,6 +97,8 @@ namespace QuanLyHoaDon
 
         private void NumDaTra_ValueChanged(object sender, EventArgs e)
         {
+
+            //
             int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
             txtConNo.Text = a.ToString();
         }
@@ -169,9 +172,8 @@ namespace QuanLyHoaDon
 
         private void numChietKhau_MouseUp(object sender, MouseEventArgs e)
         {
-            int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
-            int b = a - (a * int.Parse(numChietKhau.Text) / 100);
-            txtThanhTien.Text = b.ToString();
+            int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
+            txtConNo.Text = a.ToString();
         }
 
         private void dgvHoaDon_DoubleClick(object sender, EventArgs e)
@@ -232,7 +234,7 @@ namespace QuanLyHoaDon
             try
             {
                 string maHD = txtMaHD.Text;
-                DateTime ngay = DateTime.Parse(txtNgay.Value.ToString());
+                string ngay = (txtNgay.Value.ToString());
                 string tenKH = txtTenKH.Text.ToString();
                 string diaChi = txtDiaChi.Text.ToString();
                 string sdt = txtSdt.Text.ToString();
@@ -266,15 +268,32 @@ namespace QuanLyHoaDon
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             string valueSearch = txtTimKiem.Text;
+            
             if (rdoMa.Checked)
             {
                 dgvHoaDon.DataSource = HoaDonBUS.SearchByID(valueSearch);
+            }
+            if (rdoNgay.Checked)
+            {
+                dgvHoaDon.DataSource = HoaDonBUS.SearchByDate(valueSearch);
             }
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
             //
+        }
+
+        private void numDaTra_MouseUp(object sender, MouseEventArgs e)
+        {
+            int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
+            txtConNo.Text = a.ToString();
+        }
+
+        private void numDaTra_MouseDown(object sender, MouseEventArgs e)
+        {
+            int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
+            txtConNo.Text = a.ToString();
         }
     }
 }

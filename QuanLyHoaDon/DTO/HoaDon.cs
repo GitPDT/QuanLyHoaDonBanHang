@@ -9,7 +9,7 @@ namespace DTO
     public class HoaDon
     {
         public string MaHD { get; set; }
-        public DateTime Ngay { get; set; }
+        public string Ngay { get; set; }
        
         public string TenKH { get; set; }
         public string DiaChi { get; set; }
@@ -23,7 +23,7 @@ namespace DTO
         public int ThanhTien { get; set; }
         public int DaTra { get; set; }
         public int ConNo { get; set; }
-        public HoaDon(string maHD, DateTime ngay, string tenKH, string diaChi, string sdt,string maHH, string tenHH,
+        public HoaDon(string maHD, string ngay, string tenKH, string diaChi, string sdt,string maHH, string tenHH,
            int soLuong, string dvt, int donGia, int chietKhau, int thanhTien, int daTra, int conNo )
         {
             this.MaHD = maHD;

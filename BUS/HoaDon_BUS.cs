@@ -48,5 +48,9 @@ namespace BUS
         {
             return HoaDonDAO.SearchByID(valueSearch);
         }
+        public List<HoaDon> SearchByDate(string valueSearch)
+        {
+            return HoaDonDAO.SearchByDate(valueSearch);
+        }
     }
 }

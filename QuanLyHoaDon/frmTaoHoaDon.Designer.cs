@@ -578,6 +578,8 @@
             this.numDaTra.TabIndex = 8;
             this.numDaTra.ValueChanged += new System.EventHandler(this.NumDaTra_ValueChanged);
             this.numDaTra.Enter += new System.EventHandler(this.NumDaTra_Enter);
+            this.numDaTra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.numDaTra_MouseDown);
+            this.numDaTra.MouseUp += new System.Windows.Forms.MouseEventHandler(this.numDaTra_MouseUp);
             // 
             // numChietKhau
             // 
@@ -759,13 +761,14 @@
             // 
             this.txtNgay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNgay.CustomFormat = "dd/MM/yyyy";
+            this.txtNgay.CustomFormat = "";
             this.txtNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtNgay.Location = new System.Drawing.Point(100, 49);
             this.txtNgay.Name = "txtNgay";
             this.txtNgay.Size = new System.Drawing.Size(237, 22);
             this.txtNgay.TabIndex = 1;
+            this.txtNgay.Value = new System.DateTime(2019, 4, 12, 0, 0, 0, 0);
             // 
             // label4
             // 
