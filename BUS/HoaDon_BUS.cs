@@ -56,5 +56,9 @@ namespace BUS
         {
             return HoaDonDAO.SearchByName(valueSearch);
         }
+        public List<HoaDon> SearchByPhone(string valueSearch)
+        {
+            return HoaDonDAO.SearchByPhone(valueSearch);
+        }
     }
 }
