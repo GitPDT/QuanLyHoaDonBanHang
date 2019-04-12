@@ -335,6 +335,7 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(243, 22);
             this.txtTimKiem.TabIndex = 13;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // btnTimKiem
             // 
@@ -347,6 +348,7 @@
             this.btnTimKiem.TabIndex = 18;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // panel1
             // 

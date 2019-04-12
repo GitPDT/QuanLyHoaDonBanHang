@@ -262,5 +262,19 @@ namespace QuanLyHoaDon
                 throw ex;
             }
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string valueSearch = txtTimKiem.Text;
+            if (rdoMa.Checked)
+            {
+                dgvHoaDon.DataSource = HoaDonBUS.SearchByID(valueSearch);
+            }
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            //
+        }
     }
 }
