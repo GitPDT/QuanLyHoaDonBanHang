@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BUS;
+﻿using BUS;
 using DTO;
+using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace QuanLyHoaDon
 {
@@ -30,7 +25,9 @@ namespace QuanLyHoaDon
         {
             txtMaHD.Select();
             ShowHoaDon();
+       
         }
+        //Them hoa don
         private void BtnThem_Click(object sender, EventArgs e)
         {
             try
@@ -114,6 +111,53 @@ namespace QuanLyHoaDon
             int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
             int b = a - (a * int.Parse(numChietKhau.Text) / 100);
             txtThanhTien.Text = b.ToString();
+        }
+
+        private void cmbTenHH_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cmbTenHH.Text)
+            {
+                case "Thép":
+                    txtMaHH.Text = "HH1";
+                    txtDonGia.Text = "11000";
+                    txtDvt.Text = "Kg";
+                    break;
+                case "Đinh vít 6mm":
+                    txtMaHH.Text = "HH2";
+                    txtDonGia.Text = "20000";
+                    txtDvt.Text = "Kg";
+                    break;
+                case "Đinh vít 12mm":
+                    txtMaHH.Text = "HH3";
+                    txtDonGia.Text = "25000";
+                    txtDvt.Text = "Kg";
+                    break;
+                case "Xi măng":
+                    txtMaHH.Text = "HH4";
+                    txtDonGia.Text = "80000";
+                    txtDvt.Text = "Bao";
+                    break;
+                case "Gạch ốp tường":
+                    txtMaHH.Text = "HH5";
+                    txtDonGia.Text = "15000";
+                    txtDvt.Text = "m2";
+                    break;
+                case "Gạch ốp sàn":
+                    txtMaHH.Text = "HH6";
+                    txtDonGia.Text = "17000";
+                    txtDvt.Text = "m2";
+                    break;
+                case "Sắt":
+                    txtMaHH.Text = "HH7";
+                    txtDonGia.Text = "11000";
+                    txtDvt.Text = "Kg";
+                    break;
+                case "Kẽm":
+                    txtMaHH.Text = "HH8";
+                    txtDonGia.Text = "16000";
+                    txtDvt.Text = "Cuộn";
+                    break;
+            }
         }
     }
 }

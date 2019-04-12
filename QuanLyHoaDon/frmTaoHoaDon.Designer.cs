@@ -72,6 +72,8 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.numDaTra = new System.Windows.Forms.NumericUpDown();
+            this.numChietKhau = new System.Windows.Forms.NumericUpDown();
             this.numSoLg = new System.Windows.Forms.NumericUpDown();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -89,19 +91,17 @@
             this.txtNgay = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.numDaTra = new System.Windows.Forms.NumericUpDown();
-            this.numChietKhau = new System.Windows.Forms.NumericUpDown();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numDaTra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numChietKhau)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLg)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numDaTra)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numChietKhau)).BeginInit();
             this.SuspendLayout();
             // 
             // lbTenKH
@@ -194,11 +194,14 @@
             // 
             // txtDonGia
             // 
+            this.txtDonGia.BackColor = System.Drawing.SystemColors.Control;
             this.txtDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonGia.Location = new System.Drawing.Point(96, 82);
             this.txtDonGia.Name = "txtDonGia";
+            this.txtDonGia.ReadOnly = true;
             this.txtDonGia.Size = new System.Drawing.Size(183, 22);
             this.txtDonGia.TabIndex = 8;
+            this.txtDonGia.Text = "0";
             this.txtDonGia.TextChanged += new System.EventHandler(this.txtDonGia_TextChanged);
             // 
             // label7
@@ -221,7 +224,7 @@
             // 
             // txtThanhTien
             // 
-            this.txtThanhTien.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtThanhTien.BackColor = System.Drawing.SystemColors.Control;
             this.txtThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtThanhTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.txtThanhTien.Location = new System.Drawing.Point(96, 148);
@@ -550,6 +553,41 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết hóa đơn";
             // 
+            // numDaTra
+            // 
+            this.numDaTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numDaTra.Increment = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numDaTra.Location = new System.Drawing.Point(96, 182);
+            this.numDaTra.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.numDaTra.Name = "numDaTra";
+            this.numDaTra.Size = new System.Drawing.Size(139, 22);
+            this.numDaTra.TabIndex = 12;
+            this.numDaTra.ValueChanged += new System.EventHandler(this.numDaTra_ValueChanged);
+            this.numDaTra.Enter += new System.EventHandler(this.numDaTra_Enter);
+            // 
+            // numChietKhau
+            // 
+            this.numChietKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numChietKhau.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numChietKhau.Location = new System.Drawing.Point(96, 116);
+            this.numChietKhau.Name = "numChietKhau";
+            this.numChietKhau.Size = new System.Drawing.Size(139, 22);
+            this.numChietKhau.TabIndex = 12;
+            this.numChietKhau.ValueChanged += new System.EventHandler(this.numChietKhau_ValueChanged);
+            this.numChietKhau.Enter += new System.EventHandler(this.numChietKhau_Enter);
+            // 
             // numSoLg
             // 
             this.numSoLg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -618,12 +656,19 @@
             this.cmbTenHH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTenHH.FormattingEnabled = true;
             this.cmbTenHH.Items.AddRange(new object[] {
-            "Đinh",
-            "Ốc vít"});
+            "Thép",
+            "Đinh vít 6mm",
+            "Đinh vít 12mm",
+            "Xi măng",
+            "Gạch ốp tường",
+            "Gạch ốp sàn",
+            "Sắt",
+            "Kẽm"});
             this.cmbTenHH.Location = new System.Drawing.Point(96, 14);
             this.cmbTenHH.Name = "cmbTenHH";
             this.cmbTenHH.Size = new System.Drawing.Size(139, 24);
             this.cmbTenHH.TabIndex = 11;
+            this.cmbTenHH.SelectedIndexChanged += new System.EventHandler(this.cmbTenHH_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -657,6 +702,7 @@
             this.txtMaHH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaHH.Location = new System.Drawing.Point(286, 15);
             this.txtMaHH.Name = "txtMaHH";
+            this.txtMaHH.ReadOnly = true;
             this.txtMaHH.Size = new System.Drawing.Size(139, 22);
             this.txtMaHH.TabIndex = 9;
             // 
@@ -665,12 +711,13 @@
             this.txtDvt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDvt.Location = new System.Drawing.Point(286, 48);
             this.txtDvt.Name = "txtDvt";
+            this.txtDvt.ReadOnly = true;
             this.txtDvt.Size = new System.Drawing.Size(139, 22);
             this.txtDvt.TabIndex = 9;
             // 
             // txtConNo
             // 
-            this.txtConNo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtConNo.BackColor = System.Drawing.SystemColors.Control;
             this.txtConNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConNo.ForeColor = System.Drawing.Color.Red;
             this.txtConNo.Location = new System.Drawing.Point(286, 181);
@@ -735,41 +782,6 @@
             this.tabControl1.Size = new System.Drawing.Size(921, 464);
             this.tabControl1.TabIndex = 11;
             // 
-            // numDaTra
-            // 
-            this.numDaTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numDaTra.Increment = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numDaTra.Location = new System.Drawing.Point(96, 182);
-            this.numDaTra.Maximum = new decimal(new int[] {
-            1000000000,
-            0,
-            0,
-            0});
-            this.numDaTra.Name = "numDaTra";
-            this.numDaTra.Size = new System.Drawing.Size(139, 22);
-            this.numDaTra.TabIndex = 12;
-            this.numDaTra.ValueChanged += new System.EventHandler(this.numDaTra_ValueChanged);
-            this.numDaTra.Enter += new System.EventHandler(this.numDaTra_Enter);
-            // 
-            // numChietKhau
-            // 
-            this.numChietKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numChietKhau.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numChietKhau.Location = new System.Drawing.Point(96, 116);
-            this.numChietKhau.Name = "numChietKhau";
-            this.numChietKhau.Size = new System.Drawing.Size(139, 22);
-            this.numChietKhau.TabIndex = 12;
-            this.numChietKhau.ValueChanged += new System.EventHandler(this.numChietKhau_ValueChanged);
-            this.numChietKhau.Enter += new System.EventHandler(this.numChietKhau_Enter);
-            // 
             // frmTaoHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -788,12 +800,12 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numDaTra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numChietKhau)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLg)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numDaTra)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numChietKhau)).EndInit();
             this.ResumeLayout(false);
 
         }
