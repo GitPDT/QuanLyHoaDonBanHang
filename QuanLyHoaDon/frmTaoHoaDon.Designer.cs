@@ -497,6 +497,7 @@
             this.btnRefresh.Size = new System.Drawing.Size(43, 36);
             this.btnRefresh.TabIndex = 12;
             this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnSua
             // 

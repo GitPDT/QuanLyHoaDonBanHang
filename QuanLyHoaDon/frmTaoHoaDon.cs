@@ -25,7 +25,14 @@ namespace QuanLyHoaDon
         {
             txtMaHD.Select();
             ShowHoaDon();
-       
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+        }
+        private void Refresh_HD()
+        {
+            txtMaHD.Text = txtTenKH.Text = txtDiaChi.Text = txtSdt.Text = txtDvt.Text = cmbTenHH.Text = txtMaHH.Text = "";
+            numChietKhau.Value = numDaTra.Value = numSoLg.Value =  0;
+            txtConNo.Text = txtThanhTien.Text = txtDonGia.Text = "0";
         }
         //Them hoa don
         private void BtnThem_Click(object sender, EventArgs e)
@@ -211,6 +218,11 @@ namespace QuanLyHoaDon
                     throw ex;
                 }
             }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            Refresh_HD();
         }
     }
 }
