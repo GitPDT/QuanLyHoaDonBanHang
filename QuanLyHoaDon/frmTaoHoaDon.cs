@@ -87,33 +87,33 @@ namespace QuanLyHoaDon
             txtThanhTien.Text = b.ToString();
         }
 
-        private void numDaTra_ValueChanged(object sender, EventArgs e)
+        private void NumDaTra_ValueChanged(object sender, EventArgs e)
         {
             int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
             txtConNo.Text = a.ToString();
         }
         //event
-        private void numDaTra_Enter(object sender, EventArgs e)
+        private void NumDaTra_Enter(object sender, EventArgs e)
         {
             int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
             txtConNo.Text = a.ToString();
         }
 
-        private void numChietKhau_ValueChanged(object sender, EventArgs e)
+        private void NumChietKhau_ValueChanged(object sender, EventArgs e)
         {
             int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
             int b = a - (a * int.Parse(numChietKhau.Text) / 100);
             txtThanhTien.Text = b.ToString();
         }
 
-        private void numChietKhau_Enter(object sender, EventArgs e)
+        private void NumChietKhau_Enter(object sender, EventArgs e)
         {
             int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
             int b = a - (a * int.Parse(numChietKhau.Text) / 100);
             txtThanhTien.Text = b.ToString();
         }
 
-        private void cmbTenHH_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbTenHH_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (cmbTenHH.Text)
             {
@@ -157,6 +157,34 @@ namespace QuanLyHoaDon
                     txtDonGia.Text = "16000";
                     txtDvt.Text = "Cuộn";
                     break;
+            }
+        }
+
+        private void numChietKhau_MouseUp(object sender, MouseEventArgs e)
+        {
+            int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
+            int b = a - (a * int.Parse(numChietKhau.Text) / 100);
+            txtThanhTien.Text = b.ToString();
+        }
+
+        private void dgvHoaDon_DoubleClick(object sender, EventArgs e)
+        {
+            if (dgvHoaDon.CurrentRow.Index != -1)
+            {
+                txtMaHD.Text = dgvHoaDon.CurrentRow.Cells[0].Value.ToString();
+                txtNgay.Text = dgvHoaDon.CurrentRow.Cells[1].Value.ToString();
+                txtTenKH.Text = dgvHoaDon.CurrentRow.Cells[2].Value.ToString();
+                txtDiaChi.Text = dgvHoaDon.CurrentRow.Cells[3].Value.ToString();
+                txtSdt.Text = dgvHoaDon.CurrentRow.Cells[4].Value.ToString();
+                txtMaHH.Text = dgvHoaDon.CurrentRow.Cells[5].Value.ToString();
+                cmbTenHH.Text = dgvHoaDon.CurrentRow.Cells[6].Value.ToString();
+                numSoLg.Text = dgvHoaDon.CurrentRow.Cells[7].Value.ToString();
+                txtDvt.Text = dgvHoaDon.CurrentRow.Cells[8].Value.ToString();
+                txtDonGia.Text = dgvHoaDon.CurrentRow.Cells[9].Value.ToString();
+                numChietKhau.Text = dgvHoaDon.CurrentRow.Cells[10].Value.ToString();
+                txtThanhTien.Text = dgvHoaDon.CurrentRow.Cells[11].Value.ToString();
+                numDaTra.Text = dgvHoaDon.CurrentRow.Cells[12].Value.ToString();
+                txtConNo.Text = dgvHoaDon.CurrentRow.Cells[13].Value.ToString();
             }
         }
     }

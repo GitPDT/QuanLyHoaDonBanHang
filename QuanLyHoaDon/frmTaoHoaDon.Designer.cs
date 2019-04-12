@@ -178,7 +178,7 @@
             this.btnThem.Location = new System.Drawing.Point(14, 29);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(80, 34);
-            this.btnThem.TabIndex = 10;
+            this.btnThem.TabIndex = 9;
             this.btnThem.Text = "THÊM";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.BtnThem_Click);
@@ -290,7 +290,7 @@
             this.rdoNgay.Location = new System.Drawing.Point(791, 9);
             this.rdoNgay.Name = "rdoNgay";
             this.rdoNgay.Size = new System.Drawing.Size(94, 17);
-            this.rdoNgay.TabIndex = 11;
+            this.rdoNgay.TabIndex = 17;
             this.rdoNgay.TabStop = true;
             this.rdoNgay.Text = "Tìm theo Ngày";
             this.rdoNgay.UseVisualStyleBackColor = true;
@@ -301,7 +301,7 @@
             this.rdoSDT.Location = new System.Drawing.Point(649, 9);
             this.rdoSDT.Name = "rdoSDT";
             this.rdoSDT.Size = new System.Drawing.Size(116, 17);
-            this.rdoSDT.TabIndex = 11;
+            this.rdoSDT.TabIndex = 16;
             this.rdoSDT.TabStop = true;
             this.rdoSDT.Text = "Tìm kiếm theo SĐT";
             this.rdoSDT.UseVisualStyleBackColor = true;
@@ -312,7 +312,7 @@
             this.rdoTen.Location = new System.Drawing.Point(507, 9);
             this.rdoTen.Name = "rdoTen";
             this.rdoTen.Size = new System.Drawing.Size(102, 17);
-            this.rdoTen.TabIndex = 11;
+            this.rdoTen.TabIndex = 15;
             this.rdoTen.TabStop = true;
             this.rdoTen.Text = "Tìm theo tên KH";
             this.rdoTen.UseVisualStyleBackColor = true;
@@ -323,7 +323,7 @@
             this.rdoMa.Location = new System.Drawing.Point(365, 9);
             this.rdoMa.Name = "rdoMa";
             this.rdoMa.Size = new System.Drawing.Size(102, 17);
-            this.rdoMa.TabIndex = 11;
+            this.rdoMa.TabIndex = 14;
             this.rdoMa.TabStop = true;
             this.rdoMa.Text = "Tìm theo mã HĐ";
             this.rdoMa.UseVisualStyleBackColor = true;
@@ -334,7 +334,7 @@
             this.txtTimKiem.Location = new System.Drawing.Point(6, 6);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(243, 22);
-            this.txtTimKiem.TabIndex = 0;
+            this.txtTimKiem.TabIndex = 13;
             // 
             // btnTimKiem
             // 
@@ -344,7 +344,7 @@
             this.btnTimKiem.Location = new System.Drawing.Point(255, 4);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(94, 27);
-            this.btnTimKiem.TabIndex = 10;
+            this.btnTimKiem.TabIndex = 18;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
             // 
@@ -384,6 +384,7 @@
             this.dgvHoaDon.Name = "dgvHoaDon";
             this.dgvHoaDon.Size = new System.Drawing.Size(911, 168);
             this.dgvHoaDon.TabIndex = 0;
+            this.dgvHoaDon.DoubleClick += new System.EventHandler(this.dgvHoaDon_DoubleClick);
             // 
             // Column1
             // 
@@ -494,7 +495,7 @@
             this.btnRefresh.Location = new System.Drawing.Point(33, 157);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(43, 36);
-            this.btnRefresh.TabIndex = 11;
+            this.btnRefresh.TabIndex = 12;
             this.btnRefresh.UseVisualStyleBackColor = false;
             // 
             // btnSua
@@ -517,7 +518,7 @@
             this.btnXoa.Location = new System.Drawing.Point(14, 117);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(80, 34);
-            this.btnXoa.TabIndex = 10;
+            this.btnXoa.TabIndex = 11;
             this.btnXoa.Text = "XÓA";
             this.btnXoa.UseVisualStyleBackColor = false;
             // 
@@ -569,9 +570,9 @@
             0});
             this.numDaTra.Name = "numDaTra";
             this.numDaTra.Size = new System.Drawing.Size(139, 22);
-            this.numDaTra.TabIndex = 12;
-            this.numDaTra.ValueChanged += new System.EventHandler(this.numDaTra_ValueChanged);
-            this.numDaTra.Enter += new System.EventHandler(this.numDaTra_Enter);
+            this.numDaTra.TabIndex = 8;
+            this.numDaTra.ValueChanged += new System.EventHandler(this.NumDaTra_ValueChanged);
+            this.numDaTra.Enter += new System.EventHandler(this.NumDaTra_Enter);
             // 
             // numChietKhau
             // 
@@ -584,22 +585,23 @@
             this.numChietKhau.Location = new System.Drawing.Point(96, 116);
             this.numChietKhau.Name = "numChietKhau";
             this.numChietKhau.Size = new System.Drawing.Size(139, 22);
-            this.numChietKhau.TabIndex = 12;
-            this.numChietKhau.ValueChanged += new System.EventHandler(this.numChietKhau_ValueChanged);
-            this.numChietKhau.Enter += new System.EventHandler(this.numChietKhau_Enter);
+            this.numChietKhau.TabIndex = 7;
+            this.numChietKhau.ValueChanged += new System.EventHandler(this.NumChietKhau_ValueChanged);
+            this.numChietKhau.Enter += new System.EventHandler(this.NumChietKhau_Enter);
+            this.numChietKhau.MouseUp += new System.Windows.Forms.MouseEventHandler(this.numChietKhau_MouseUp);
             // 
             // numSoLg
             // 
             this.numSoLg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numSoLg.Location = new System.Drawing.Point(96, 48);
             this.numSoLg.Maximum = new decimal(new int[] {
-            10000,
+            100000,
             0,
             0,
             0});
             this.numSoLg.Name = "numSoLg";
             this.numSoLg.Size = new System.Drawing.Size(139, 22);
-            this.numSoLg.TabIndex = 12;
+            this.numSoLg.TabIndex = 6;
             this.numSoLg.ValueChanged += new System.EventHandler(this.NumSoLg_ValueChanged);
             this.numSoLg.Enter += new System.EventHandler(this.NumSoLg_Enter);
             // 
@@ -667,8 +669,8 @@
             this.cmbTenHH.Location = new System.Drawing.Point(96, 14);
             this.cmbTenHH.Name = "cmbTenHH";
             this.cmbTenHH.Size = new System.Drawing.Size(139, 24);
-            this.cmbTenHH.TabIndex = 11;
-            this.cmbTenHH.SelectedIndexChanged += new System.EventHandler(this.cmbTenHH_SelectedIndexChanged);
+            this.cmbTenHH.TabIndex = 5;
+            this.cmbTenHH.SelectedIndexChanged += new System.EventHandler(this.CmbTenHH_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -758,7 +760,7 @@
             this.txtNgay.Location = new System.Drawing.Point(100, 49);
             this.txtNgay.Name = "txtNgay";
             this.txtNgay.Size = new System.Drawing.Size(237, 22);
-            this.txtNgay.TabIndex = 5;
+            this.txtNgay.TabIndex = 1;
             // 
             // label4
             // 
