@@ -30,6 +30,8 @@ namespace QuanLyHoaDon
         }
         private void BtnAddCus_Click(object sender, EventArgs e)
         {
+            string sql = "SELECT * FROM KHACHHANG ";
+            //
             if (txtMaKH.Text == "")
                 MessageBox.Show("Vui lòng nhập mã khách hàng");
             else
@@ -58,10 +60,10 @@ namespace QuanLyHoaDon
                     LoadCus();
                     Clear();
                 }
-                catch (SqlException ex)
+                catch
                 {
 
-                    throw ex;
+                    MessageBox.Show("Mã khách hàng đã tồn tại !");
                 }
             }
             

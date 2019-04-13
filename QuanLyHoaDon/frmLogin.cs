@@ -79,5 +79,15 @@ namespace QuanLyHoaDon
                 e.Cancel = true;
             }
         }
+
+        private void CkbShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbShowPass.Checked)
+            {
+                txtMK.PasswordChar = '\0';
+            }
+            else
+                txtMK.PasswordChar = '*';
+        }
     }
 }

@@ -36,6 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ckbShowPass = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +45,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 151);
+            this.label1.Location = new System.Drawing.Point(26, 135);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 0;
@@ -57,7 +58,7 @@
             this.txtTK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTK.Location = new System.Drawing.Point(103, 141);
+            this.txtTK.Location = new System.Drawing.Point(103, 125);
             this.txtTK.Multiline = true;
             this.txtTK.Name = "txtTK";
             this.txtTK.Size = new System.Drawing.Size(214, 35);
@@ -70,7 +71,7 @@
             this.txtMK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMK.Location = new System.Drawing.Point(103, 190);
+            this.txtMK.Location = new System.Drawing.Point(103, 174);
             this.txtMK.Multiline = true;
             this.txtMK.Name = "txtMK";
             this.txtMK.PasswordChar = '*';
@@ -82,7 +83,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 198);
+            this.label2.Location = new System.Drawing.Point(26, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 16);
             this.label2.TabIndex = 0;
@@ -95,7 +96,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(212, 237);
+            this.button1.Location = new System.Drawing.Point(212, 251);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 39);
             this.button1.TabIndex = 2;
@@ -138,12 +139,24 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // ckbShowPass
+            // 
+            this.ckbShowPass.AutoSize = true;
+            this.ckbShowPass.Location = new System.Drawing.Point(103, 215);
+            this.ckbShowPass.Name = "ckbShowPass";
+            this.ckbShowPass.Size = new System.Drawing.Size(95, 17);
+            this.ckbShowPass.TabIndex = 5;
+            this.ckbShowPass.Text = "Hiện mật khẩu";
+            this.ckbShowPass.UseVisualStyleBackColor = true;
+            this.ckbShowPass.CheckedChanged += new System.EventHandler(this.CkbShowPass_CheckedChanged);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(351, 302);
+            this.Controls.Add(this.ckbShowPass);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
@@ -173,5 +186,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox ckbShowPass;
     }
 }
