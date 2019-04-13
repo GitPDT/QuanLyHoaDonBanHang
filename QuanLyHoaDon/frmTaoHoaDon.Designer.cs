@@ -202,7 +202,7 @@
             this.txtDonGia.Size = new System.Drawing.Size(183, 22);
             this.txtDonGia.TabIndex = 8;
             this.txtDonGia.Text = "0";
-            this.txtDonGia.TextChanged += new System.EventHandler(this.txtDonGia_TextChanged);
+            
             // 
             // label7
             // 
@@ -233,7 +233,7 @@
             this.txtThanhTien.Size = new System.Drawing.Size(186, 22);
             this.txtThanhTien.TabIndex = 9;
             this.txtThanhTien.Text = "0";
-            this.txtThanhTien.TextChanged += new System.EventHandler(this.txtThanhTien_TextChanged);
+            this.txtThanhTien.TextChanged += new System.EventHandler(this.TxtThanhTien_TextChanged);
             // 
             // label9
             // 
@@ -336,7 +336,7 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(243, 22);
             this.txtTimKiem.TabIndex = 13;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+          
             // 
             // btnTimKiem
             // 
@@ -349,7 +349,7 @@
             this.btnTimKiem.TabIndex = 18;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            this.btnTimKiem.Click += new System.EventHandler(this.BtnTimKiem_Click);
             // 
             // panel1
             // 
@@ -387,7 +387,7 @@
             this.dgvHoaDon.Name = "dgvHoaDon";
             this.dgvHoaDon.Size = new System.Drawing.Size(911, 168);
             this.dgvHoaDon.TabIndex = 0;
-            this.dgvHoaDon.DoubleClick += new System.EventHandler(this.dgvHoaDon_DoubleClick);
+            this.dgvHoaDon.DoubleClick += new System.EventHandler(this.DgvHoaDon_DoubleClick);
             // 
             // Column1
             // 
@@ -500,7 +500,7 @@
             this.btnRefresh.Size = new System.Drawing.Size(43, 36);
             this.btnRefresh.TabIndex = 12;
             this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
             // btnSua
             // 
@@ -513,7 +513,7 @@
             this.btnSua.TabIndex = 10;
             this.btnSua.Text = "SỬA";
             this.btnSua.UseVisualStyleBackColor = false;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            this.btnSua.Click += new System.EventHandler(this.BtnSua_Click);
             // 
             // btnXoa
             // 
@@ -526,7 +526,7 @@
             this.btnXoa.TabIndex = 11;
             this.btnXoa.Text = "XÓA";
             this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.btnXoa.Click += new System.EventHandler(this.BtnXoa_Click);
             // 
             // groupBox2
             // 
@@ -579,8 +579,8 @@
             this.numDaTra.TabIndex = 8;
             this.numDaTra.ValueChanged += new System.EventHandler(this.NumDaTra_ValueChanged);
             this.numDaTra.Enter += new System.EventHandler(this.NumDaTra_Enter);
-            this.numDaTra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.numDaTra_MouseDown);
-            this.numDaTra.MouseUp += new System.Windows.Forms.MouseEventHandler(this.numDaTra_MouseUp);
+            this.numDaTra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NumDaTra_MouseDown);
+            this.numDaTra.MouseUp += new System.Windows.Forms.MouseEventHandler(this.NumDaTra_MouseUp);
             // 
             // numChietKhau
             // 
@@ -596,7 +596,8 @@
             this.numChietKhau.TabIndex = 7;
             this.numChietKhau.ValueChanged += new System.EventHandler(this.NumChietKhau_ValueChanged);
             this.numChietKhau.Enter += new System.EventHandler(this.NumChietKhau_Enter);
-            this.numChietKhau.MouseUp += new System.Windows.Forms.MouseEventHandler(this.numChietKhau_MouseUp);
+            this.numChietKhau.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NumChietKhau_MouseDown);
+            this.numChietKhau.MouseUp += new System.Windows.Forms.MouseEventHandler(this.NumChietKhau_MouseUp);
             // 
             // numSoLg
             // 

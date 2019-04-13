@@ -38,6 +38,13 @@ namespace QuanLyHoaDon
         //Them hoa don
         private void BtnThem_Click(object sender, EventArgs e)
         {
+            if (txtMaHD.Text =="" )
+            {
+                MessageBox.Show("Vui lòng nhập Mã hóa đơn !");
+                
+            }
+            else if (cmbTenHH.Text == "")
+                MessageBox.Show("Vui lòng chọn Tên hàng hóa !");
             try
             {
                 string maHD = txtMaHD.Text;
@@ -65,20 +72,15 @@ namespace QuanLyHoaDon
                     MessageBox.Show("Thêm thất bại!");
                 ShowHoaDon();
             }
-            catch (SqlException ex)
+            catch (Exception)
             {
-
-                throw ex;
+                
             }
         }
 
-        private void txtThanhTien_TextChanged(object sender, EventArgs e)
+        private void TxtThanhTien_TextChanged(object sender, EventArgs e)
         {
             //
-        }
-        private void txtDonGia_TextChanged(object sender, EventArgs e)
-        {
-           
         }
         //event value changed
         private void NumSoLg_ValueChanged(object sender, EventArgs e)
@@ -97,8 +99,6 @@ namespace QuanLyHoaDon
 
         private void NumDaTra_ValueChanged(object sender, EventArgs e)
         {
-
-            //
             int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
             txtConNo.Text = a.ToString();
         }
@@ -170,13 +170,14 @@ namespace QuanLyHoaDon
             }
         }
 
-        private void numChietKhau_MouseUp(object sender, MouseEventArgs e)
+        private void NumChietKhau_MouseUp(object sender, MouseEventArgs e)
         {
-            int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
-            txtConNo.Text = a.ToString();
+            int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
+            int b = a - (a * int.Parse(numChietKhau.Text) / 100);
+            txtThanhTien.Text = b.ToString();
         }
 
-        private void dgvHoaDon_DoubleClick(object sender, EventArgs e)
+        private void DgvHoaDon_DoubleClick(object sender, EventArgs e)
         {
             btnXoa.Enabled = true;
             btnSua.Enabled = true;
@@ -199,7 +200,7 @@ namespace QuanLyHoaDon
             }
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+        private void BtnXoa_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn xóa?", "Cảnh báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
@@ -224,12 +225,12 @@ namespace QuanLyHoaDon
             }
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
+        private void BtnRefresh_Click(object sender, EventArgs e)
         {
             Refresh_HD();
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
+        private void BtnSua_Click(object sender, EventArgs e)
         {
             try
             {
@@ -265,8 +266,10 @@ namespace QuanLyHoaDon
             }
         }
 
-        private void btnTimKiem_Click(object sender, EventArgs e)
+        private void BtnTimKiem_Click(object sender, EventArgs e)
         {
+            if (txtTimKiem.Text == "")
+                MessageBox.Show("Vui lòng nhập thông tin cần tìm!");
             string valueSearch = txtTimKiem.Text;
             
             if (rdoMa.Checked)
@@ -286,22 +289,23 @@ namespace QuanLyHoaDon
                 dgvHoaDon.DataSource = HoaDonBUS.SearchByPhone(valueSearch);
             }
         }
-
-        private void txtTimKiem_TextChanged(object sender, EventArgs e)
-        {
-            //
-        }
-
-        private void numDaTra_MouseUp(object sender, MouseEventArgs e)
+        private void NumDaTra_MouseUp(object sender, MouseEventArgs e)
         {
             int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
             txtConNo.Text = a.ToString();
         }
 
-        private void numDaTra_MouseDown(object sender, MouseEventArgs e)
+        private void NumDaTra_MouseDown(object sender, MouseEventArgs e)
         {
             int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
             txtConNo.Text = a.ToString();
+        }
+
+        private void NumChietKhau_MouseDown(object sender, MouseEventArgs e)
+        {
+            int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
+            int b = a - (a * int.Parse(numChietKhau.Text) / 100);
+            txtThanhTien.Text = b.ToString();
         }
     }
 }

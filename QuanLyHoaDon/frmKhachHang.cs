@@ -30,35 +30,41 @@ namespace QuanLyHoaDon
         }
         private void BtnAddCus_Click(object sender, EventArgs e)
         {
-            try
+            if (txtMaKH.Text == "")
+                MessageBox.Show("Vui lòng nhập mã khách hàng");
+            else
             {
-                string maKh = txtMaKH.Text;
-                string tenKH = txtTenKH.Text;
-                string diaChiKH = txtDiaChi.Text;
-                string sdtKH = txtSDT.Text;
-                if (rdoNam.Checked == true)
+                try
                 {
-                    gender = "Nam";
-                }
-                else
-                    gender = "Nữ";
-                KhachHang cus = new KhachHang(maKh, tenKH, diaChiKH, gender, sdtKH);
-                bool result = customerBUS.AddCustomerBUS(cus);
+                    string maKh = txtMaKH.Text;
+                    string tenKH = txtTenKH.Text;
+                    string diaChiKH = txtDiaChi.Text;
+                    string sdtKH = txtSDT.Text;
+                    if (rdoNam.Checked == true)
+                    {
+                        gender = "Nam";
+                    }
+                    else
+                        gender = "Nữ";
+                    KhachHang cus = new KhachHang(maKh, tenKH, diaChiKH, gender, sdtKH);
+                    bool result = customerBUS.AddCustomerBUS(cus);
 
-                if (result == true)
+                    if (result == true)
+                    {
+                        MessageBox.Show("Thêm thành công!");
+                    }
+                    else
+                        MessageBox.Show("Thêm thất bại!");
+                    LoadCus();
+                    Clear();
+                }
+                catch (SqlException ex)
                 {
-                    MessageBox.Show("Thêm thành công!");
-                }
-                else
-                    MessageBox.Show("Thêm thất bại!");
-                LoadCus();
-                Clear();
-            }
-            catch (SqlException ex)
-            {
 
-                throw ex;
+                    throw ex;
+                }
             }
+            
         }
 
         private void Clear()
@@ -153,6 +159,8 @@ namespace QuanLyHoaDon
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
+            if (txtTimKiem.Text == "")
+                MessageBox.Show("Vui lòng nhập thông tin cần tìm");
             string valueToSearch = txtTimKiem.Text;
             if (rdoID.Checked)
             {
