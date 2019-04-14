@@ -41,41 +41,45 @@ namespace QuanLyHoaDon
             if (txtMaHD.Text =="" )
             {
                 MessageBox.Show("Vui lòng nhập Mã hóa đơn !");
-                
+             
             }
             else if (cmbTenHH.Text == "")
                 MessageBox.Show("Vui lòng chọn Tên hàng hóa !");
-            try
+            else
             {
-                string maHD = txtMaHD.Text;
-                string ngay = (txtNgay.Value.ToString());
-                string tenKH = txtTenKH.Text.ToString();
-                string diaChi = txtDiaChi.Text.ToString();
-                string sdt = txtSdt.Text.ToString();
-                string maHH = txtMaHH.Text;
-                string tenHH = cmbTenHH.Text;
-
-                int soLuong = int.Parse(numSoLg.Value.ToString());
-                string dvt = txtDvt.Text.ToString();
-                int donGia = int.Parse(txtDonGia.Text);
-                int chietKhau = int.Parse(numChietKhau.Text);
-                int thanhTien = int.Parse(txtThanhTien.Text);
-                int daTra = int.Parse(numDaTra.Text);
-                int conNo = int.Parse(txtConNo.Text);
-                HoaDon hd = new HoaDon(maHD,ngay,tenKH,diaChi,sdt,maHH,tenHH,soLuong,dvt,donGia,chietKhau,thanhTien,daTra,conNo);
-                bool kq = HoaDonBUS.AddHoaDon(hd);
-                if (kq)
+                try
                 {
-                    MessageBox.Show("Thêm thành công!");
+                    string maHD = txtMaHD.Text;
+                    string ngay = (txtNgay.Value.ToString());
+                    string tenKH = txtTenKH.Text.ToString();
+                    string diaChi = txtDiaChi.Text.ToString();
+                    string sdt = txtSdt.Text.ToString();
+                    string maHH = txtMaHH.Text;
+                    string tenHH = cmbTenHH.Text;
+
+                    int soLuong = int.Parse(numSoLg.Value.ToString());
+                    string dvt = txtDvt.Text.ToString();
+                    int donGia = int.Parse(txtDonGia.Text);
+                    int chietKhau = int.Parse(numChietKhau.Text);
+                    int thanhTien = int.Parse(txtThanhTien.Text);
+                    int daTra = int.Parse(numDaTra.Text);
+                    int conNo = int.Parse(txtConNo.Text);
+                    HoaDon hd = new HoaDon(maHD, ngay, tenKH, diaChi, sdt, maHH, tenHH, soLuong, dvt, donGia, chietKhau, thanhTien, daTra, conNo);
+                    bool kq = HoaDonBUS.AddHoaDon(hd);
+                    if (kq)
+                    {
+                        MessageBox.Show("Thêm thành công!");
+                    }
+                    else
+                        MessageBox.Show("Thêm thất bại!");
+                    ShowHoaDon();
                 }
-                else
-                    MessageBox.Show("Thêm thất bại!");
-                ShowHoaDon();
+                catch (Exception)
+                {
+                    MessageBox.Show("Mã hóa đơn đã tồn tại !");
+                }
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Mã hóa đơn đã tồn tại !");
-            }
+            
         }
 
         private void TxtThanhTien_TextChanged(object sender, EventArgs e)
@@ -92,6 +96,9 @@ namespace QuanLyHoaDon
             //int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
             //int b = a - (a * int.Parse(numChietKhau.Text) / 100);
             //txtThanhTien.Text = b.ToString();
+            int d = int.Parse(txtThanhTien.Text);
+            int f = int.Parse(numDaTra.Text);
+            txtConNo.Text = Convert.ToString(HoaDonBUS.TinhNo(d,f));
         }
         //event 
         public void NumSoLg_Enter(object sender, EventArgs e)
@@ -103,6 +110,9 @@ namespace QuanLyHoaDon
             //int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
             //int b = a - (a * int.Parse(numChietKhau.Text) / 100);
             //txtThanhTien.Text = b.ToString();
+            int d = int.Parse(txtThanhTien.Text);
+            int f = int.Parse(numDaTra.Text);
+            txtConNo.Text = Convert.ToString(HoaDonBUS.TinhNo(d, f));
         }
 
         public void NumDaTra_ValueChanged(object sender, EventArgs e)
@@ -132,6 +142,9 @@ namespace QuanLyHoaDon
             //int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
             //int b = a - (a * int.Parse(numChietKhau.Text) / 100);
             //txtThanhTien.Text = b.ToString();
+            int d = int.Parse(txtThanhTien.Text);
+            int f = int.Parse(numDaTra.Text);
+            txtConNo.Text = Convert.ToString(HoaDonBUS.TinhNo(d, f));
         }
 
         public void NumChietKhau_Enter(object sender, EventArgs e)
@@ -201,6 +214,9 @@ namespace QuanLyHoaDon
             //int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
             //int b = a - (a * int.Parse(numChietKhau.Text) / 100);
             //txtThanhTien.Text = b.ToString();
+            int d = int.Parse(txtThanhTien.Text);
+            int f = int.Parse(numDaTra.Text);
+            txtConNo.Text = Convert.ToString(HoaDonBUS.TinhNo(d, f));
         }
 
         public void DgvHoaDon_DoubleClick(object sender, EventArgs e)
