@@ -69,6 +69,7 @@ namespace DAO
             }
             catch (SqlException ex)
             {
+                return false;
                 throw ex;
             }
             finally

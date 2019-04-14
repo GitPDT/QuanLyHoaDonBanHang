@@ -47,5 +47,22 @@ namespace UnitTest_HD
             int expected = 80000;
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void AddHoaDon()
+        {
+            //Them duoc thi Pass
+            HoaDon hd = new HoaDon("T11", "20/11/2019", "Phan DT", "Go Vap", "09897766", "HH1", "Thép", 0, "0", 0, 0, 0,0,0);
+            bool actual = HoadonBus.AddHoaDon(hd);
+            Assert.IsTrue(actual);
+        }
+        //
+        [TestMethod]
+        public void AddHoaDon_KhongNhapMaHoaDon()
+        {
+            //Khong Them duoc thi Pass
+            HoaDon hd = new HoaDon("", "20/11/2019", "Phan DT", "Go Vap", "09897766", "", "Thép", 0, "0", 0, 0, 0, 0, 0);
+            bool actual = HoadonBus.AddHoaDon(hd);
+            Assert.IsFalse(actual);
+        }
     }
 }
