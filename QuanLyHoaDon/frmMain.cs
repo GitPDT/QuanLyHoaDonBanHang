@@ -27,11 +27,7 @@ namespace QuanLyHoaDon
             frm.Show();
         }
 
-        private void Button2_Click(object sender, EventArgs e)
-        {
-            frmDanhSachHoaDon frm = new frmDanhSachHoaDon();
-            frm.Show();
-        }
+      
 
         private void Button3_Click(object sender, EventArgs e)
         {

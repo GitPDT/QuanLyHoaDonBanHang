@@ -10,11 +10,12 @@ namespace BUS
 {
     public class LoginBUS
     {
-        public bool Login(string user, string pass)
+        DataProvider dt = new DataProvider();
+        public int Login(string user, string pass)
         {
             try
             {
-                return new DataProvider().Login(user, pass);
+                return dt.Login(user, pass);
             }
             catch (SqlException ex)
             {

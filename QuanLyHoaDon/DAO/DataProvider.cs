@@ -37,24 +37,24 @@ namespace DAO
                 cn.Close();
         }
 
-        public bool Login(string user, string pass)
+        public int Login(string user, string pass)
         {
             string sql = "SELECT COUNT(UserName) FROM Users WHERE Username = '" + user + "' AND Password = '" + pass + "'";
 
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = cn;
-            cmd.CommandText = sql;
-            cmd.CommandType = System.Data.CommandType.Text;
+            //SqlCommand cmd = new SqlCommand();
+            //cmd.Connection = cn;
+            //cmd.CommandText = sql;
+            //cmd.CommandType = System.Data.CommandType.Text;
 
             Connect();
             try
             {
-                int number = (int)cmd.ExecuteScalar();
+                int number = (int)myEXecuteScalar(sql);
 
                 if (number > 0)
-                    return true;
+                    return 0;
                 else
-                    return false;
+                    return -1;
             }
             catch (SqlException ex)
             {

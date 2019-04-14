@@ -35,11 +35,7 @@
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnKhachHang = new System.Windows.Forms.Button();
-            this.btnDoanhThu = new System.Windows.Forms.Button();
-            this.btnHoaDon = new System.Windows.Forms.Button();
             this.btnTaoHoaDon = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +56,7 @@
             this.btnThoat.BackColor = System.Drawing.Color.Tomato;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnThoat.Location = new System.Drawing.Point(500, 252);
+            this.btnThoat.Location = new System.Drawing.Point(310, 231);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(99, 41);
             this.btnThoat.TabIndex = 6;
@@ -72,7 +68,7 @@
             // 
             this.lbDangNhap.AutoSize = true;
             this.lbDangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lbDangNhap.Location = new System.Drawing.Point(22, 281);
+            this.lbDangNhap.Location = new System.Drawing.Point(250, 286);
             this.lbDangNhap.Name = "lbDangNhap";
             this.lbDangNhap.Size = new System.Drawing.Size(0, 13);
             this.lbDangNhap.TabIndex = 3;
@@ -91,7 +87,7 @@
             this.btnDangXuat.BackColor = System.Drawing.Color.Tomato;
             this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDangXuat.Location = new System.Drawing.Point(395, 252);
+            this.btnDangXuat.Location = new System.Drawing.Point(205, 231);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(99, 41);
             this.btnDangXuat.TabIndex = 5;
@@ -104,44 +100,22 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label2.Location = new System.Drawing.Point(14, 205);
+            this.label2.Location = new System.Drawing.Point(188, 198);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 20);
+            this.label2.Size = new System.Drawing.Size(90, 20);
             this.label2.TabIndex = 5;
-            this.label2.Text = "TẠO HÓA ĐƠN";
+            this.label2.Text = "HÓA ĐƠN";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(171, 205);
+            this.label3.Location = new System.Drawing.Point(324, 198);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(126, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "KHÁCH HÀNG";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label4.Location = new System.Drawing.Point(344, 205);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 20);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "HÓA ĐƠN";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label5.Location = new System.Drawing.Point(488, 205);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 20);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "DOANH THU";
             // 
             // btnKhachHang
             // 
@@ -151,49 +125,21 @@
             this.btnKhachHang.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhachHang.ForeColor = System.Drawing.Color.Tomato;
-            this.btnKhachHang.Location = new System.Drawing.Point(180, 91);
+            this.btnKhachHang.Location = new System.Drawing.Point(333, 84);
             this.btnKhachHang.Name = "btnKhachHang";
             this.btnKhachHang.Size = new System.Drawing.Size(109, 102);
             this.btnKhachHang.TabIndex = 2;
             this.btnKhachHang.UseVisualStyleBackColor = false;
             this.btnKhachHang.Click += new System.EventHandler(this.Button3_Click);
             // 
-            // btnDoanhThu
-            // 
-            this.btnDoanhThu.BackColor = System.Drawing.SystemColors.Control;
-            this.btnDoanhThu.BackgroundImage = global::QuanLyHoaDon.Properties.Resources.money;
-            this.btnDoanhThu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoanhThu.ForeColor = System.Drawing.Color.Tomato;
-            this.btnDoanhThu.Location = new System.Drawing.Point(490, 91);
-            this.btnDoanhThu.Name = "btnDoanhThu";
-            this.btnDoanhThu.Size = new System.Drawing.Size(109, 102);
-            this.btnDoanhThu.TabIndex = 4;
-            this.btnDoanhThu.UseVisualStyleBackColor = false;
-            this.btnDoanhThu.Click += new System.EventHandler(this.BtnDoanhThu_Click);
-            // 
-            // btnHoaDon
-            // 
-            this.btnHoaDon.BackColor = System.Drawing.SystemColors.Control;
-            this.btnHoaDon.BackgroundImage = global::QuanLyHoaDon.Properties.Resources.bill;
-            this.btnHoaDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHoaDon.ForeColor = System.Drawing.Color.Tomato;
-            this.btnHoaDon.Location = new System.Drawing.Point(335, 91);
-            this.btnHoaDon.Name = "btnHoaDon";
-            this.btnHoaDon.Size = new System.Drawing.Size(109, 102);
-            this.btnHoaDon.TabIndex = 3;
-            this.btnHoaDon.UseVisualStyleBackColor = false;
-            this.btnHoaDon.Click += new System.EventHandler(this.Button2_Click);
-            // 
             // btnTaoHoaDon
             // 
             this.btnTaoHoaDon.BackColor = System.Drawing.SystemColors.Control;
-            this.btnTaoHoaDon.BackgroundImage = global::QuanLyHoaDon.Properties.Resources.add;
+            this.btnTaoHoaDon.BackgroundImage = global::QuanLyHoaDon.Properties.Resources.bill;
             this.btnTaoHoaDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTaoHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaoHoaDon.ForeColor = System.Drawing.Color.Tomato;
-            this.btnTaoHoaDon.Location = new System.Drawing.Point(25, 91);
+            this.btnTaoHoaDon.Location = new System.Drawing.Point(178, 84);
             this.btnTaoHoaDon.Name = "btnTaoHoaDon";
             this.btnTaoHoaDon.Size = new System.Drawing.Size(109, 102);
             this.btnTaoHoaDon.TabIndex = 1;
@@ -206,8 +152,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(625, 317);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
@@ -215,8 +159,6 @@
             this.Controls.Add(this.btnDangXuat);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnKhachHang);
-            this.Controls.Add(this.btnDoanhThu);
-            this.Controls.Add(this.btnHoaDon);
             this.Controls.Add(this.btnTaoHoaDon);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.MaximizeBox = false;
@@ -234,9 +176,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnTaoHoaDon;
-        private System.Windows.Forms.Button btnHoaDon;
         private System.Windows.Forms.Button btnKhachHang;
-        private System.Windows.Forms.Button btnDoanhThu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label lbDangNhap;
@@ -244,7 +184,5 @@
         private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
     }
 }

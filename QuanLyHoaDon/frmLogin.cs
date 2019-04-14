@@ -26,7 +26,7 @@ namespace QuanLyHoaDon
             string user, pass;
             user = txtTK.Text.Trim();
             pass = txtMK.Text.Trim();
-            bool b = false;
+            int b = 0;
             try
             {
                 b = bus.Login(user, pass);
@@ -36,7 +36,7 @@ namespace QuanLyHoaDon
                 MessageBox.Show("Lỗi đăng nhập!\n" + ex.Message, "Login");
             }
 
-            if (b)
+            if (b==0)
             {
                 this.Hide();
                 FrmMain frm = new FrmMain();
