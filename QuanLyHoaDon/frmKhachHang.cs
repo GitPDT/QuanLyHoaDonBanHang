@@ -49,9 +49,9 @@ namespace QuanLyHoaDon
                     else
                         gender = "Nữ";
                     KhachHang cus = new KhachHang(maKh, tenKH, diaChiKH, gender, sdtKH);
-                    int result = customerBUS.AddCustomerBUS(cus);
+                    bool result = customerBUS.AddCustomerBUS(cus);
 
-                    if (result > 0)
+                    if (result)
                     {
                         MessageBox.Show("Thêm thành công!");
                     }

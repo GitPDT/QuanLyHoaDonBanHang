@@ -15,33 +15,19 @@ namespace UnitTest_HD
         [TestMethod]
         public void ThemKhachHang_NhapDungThongTin()
         {
-            string id = "P", name = "s", address = "s", sex = "s", phone = "5";
-        
-            KhachHang cus = new KhachHang(id, name, address, sex, phone);
-
-
-            List<KhachHang> list = new List<KhachHang>();
-            list = dao.ShowKhachHang();
-            int count = list.Count();
-            int index = 0;
-
-            dao.AddCustomer(cus);
-            list = dao.ShowKhachHang();
-            Assert.AreEqual(count + 1, list.Count());
-            foreach (KhachHang custom in list)
-            {
-                if (custom.MaKH == id)
-                    break;
-                index++;
-
-            }
-            Assert.AreEqual(id, list[index].MaKH);
-            Assert.AreEqual(name, list[index].TenKH);
-            Assert.AreEqual(address, list[index].DiaChi);
-            Assert.AreEqual(sex, list[index].GioiTinh);
-            Assert.AreEqual(phone, list[index].SDT);
-           
-            dao.Delete(id);
+            //Nhap thong tin dung - neu dung thi pass
+            KhachHang kh1 = new KhachHang("K11", "Phan", "Go Vap", "Nam", "08389283882");
+            bool actual = dao.AddCustomer(kh1);
+            Assert.IsTrue(actual);
+        }
+        [TestMethod]
+        public void ThemKhachHang_NhapMaKhachHangBiTrung()
+        {
+            //nhập mã khách hàng đã tồn tại
+            //Kiểm tra sai - nếu không thêm được thì Pass
+            KhachHang kh2 = new KhachHang("PH2", "Phan", "Go Vap", "Nam", "08389283882");
+            bool actual = dao.AddCustomer(kh2);
+            Assert.IsFalse(actual);
         }
     }
 }

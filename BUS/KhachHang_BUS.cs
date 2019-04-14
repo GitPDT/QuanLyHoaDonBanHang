@@ -12,7 +12,7 @@ namespace BUS
     public class KhachHang_BUS
     {
         KhachHang_DAO khachHangDAO = new KhachHang_DAO();
-        public int AddCustomerBUS(KhachHang cus)
+        public bool AddCustomerBUS(KhachHang cus)
         {
             try
             {

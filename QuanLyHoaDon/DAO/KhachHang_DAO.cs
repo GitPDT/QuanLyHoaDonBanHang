@@ -11,23 +11,24 @@ namespace DAO
     public class KhachHang_DAO : DataProvider
     {
         
-        public int AddCustomer(KhachHang cus)
+        public bool AddCustomer(KhachHang cus)
         {
             string sql = "INSERT INTO KHACHHANG(MaKH, TenKH, DiaChi, GioiTinh, SoDienThoai) VALUES('"
                 + cus.MaKH + "' , N'" + cus.TenKH + "' , N'" + cus.DiaChi + "' , N'" + cus.GioiTinh + "' , '" + cus.SDT + "')";
             try
             {
-                return myExecuteNoneQuery(sql);
-                //if (number > 0)
-                //{
-                //    return true;
-                //}
-                //else
-                //    return false;
+                int number = myExecuteNoneQuery(sql);
+                if (number > 0)
+                {
+                    return true;
+                }
+                else
+                    return false;
             }
-            catch (SqlException ex)
+            catch (Exception)
             {
-                throw ex;
+                //throw ex;
+                return false;
             }
         }
         public List<KhachHang> ShowKhachHang()
