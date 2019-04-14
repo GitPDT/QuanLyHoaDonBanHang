@@ -41,9 +41,16 @@ namespace UnitTest_HD
         public void XoaKhachHang()
         {
             //Neu Xoa thanh cong thi Pass
-            //KhachHang kh2 = new KhachHang("PH2", "Phan Duc Tai", "Go Vap", "Nam", "08389283882");
             bool actual = dao.Delete("PH2");
             Assert.IsTrue(actual);
         }
+        [TestMethod]
+        public void XoaKhachHang_MaKH_KhongTonTai()
+        {
+            //Neu Xoa khong thanh cong thi Pass
+            bool actual = dao.Delete("MM");
+            Assert.IsFalse(actual);
+        }
+
     }
 }
