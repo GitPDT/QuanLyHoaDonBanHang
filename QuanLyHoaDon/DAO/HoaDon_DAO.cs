@@ -281,5 +281,11 @@ namespace DAO
             thanhtien = dongia * soluong - ((dongia * soluong) * chietkhau / 100);
             return thanhtien;
         }
+        public int TinhNo(int thanhtien, int datra)
+        {
+            int tienNo = 0;
+            tienNo = thanhtien - datra;
+            return tienNo;
+        }
     }
 }

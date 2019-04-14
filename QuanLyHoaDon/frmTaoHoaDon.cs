@@ -96,35 +96,53 @@ namespace QuanLyHoaDon
         //event 
         public void NumSoLg_Enter(object sender, EventArgs e)
         {
-            int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
-            int b = a - (a * int.Parse(numChietKhau.Text) / 100);
-            txtThanhTien.Text = b.ToString();
+            int a = int.Parse(txtDonGia.Text);
+            int b = int.Parse(numSoLg.Value.ToString());
+            int c = int.Parse(numChietKhau.Value.ToString());
+            txtThanhTien.Text = Convert.ToString(HoaDonBUS.TinhTien(a, b, c));
+            //int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
+            //int b = a - (a * int.Parse(numChietKhau.Text) / 100);
+            //txtThanhTien.Text = b.ToString();
         }
 
         public void NumDaTra_ValueChanged(object sender, EventArgs e)
         {
-            int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
-            txtConNo.Text = a.ToString();
+            int a = int.Parse(txtThanhTien.Text);
+            int b = int.Parse(numDaTra.Text);
+            txtConNo.Text = Convert.ToString(HoaDonBUS.TinhNo(a, b));
+            //int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
+            //txtConNo.Text = a.ToString();
         }
         //event
         public void NumDaTra_Enter(object sender, EventArgs e)
         {
-            int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
-            txtConNo.Text = a.ToString();
+            int a = int.Parse(txtThanhTien.Text);
+            int b = int.Parse(numDaTra.Text);
+            txtConNo.Text = Convert.ToString(HoaDonBUS.TinhNo(a, b));
+            //int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
+            //txtConNo.Text = a.ToString();
         }
 
         public void NumChietKhau_ValueChanged(object sender, EventArgs e)
         {
-            int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
-            int b = a - (a * int.Parse(numChietKhau.Text) / 100);
-            txtThanhTien.Text = b.ToString();
+            int a = int.Parse(txtDonGia.Text);
+            int b = int.Parse(numSoLg.Value.ToString());
+            int c = int.Parse(numChietKhau.Value.ToString());
+            txtThanhTien.Text = Convert.ToString(HoaDonBUS.TinhTien(a, b, c));
+            //int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
+            //int b = a - (a * int.Parse(numChietKhau.Text) / 100);
+            //txtThanhTien.Text = b.ToString();
         }
 
         public void NumChietKhau_Enter(object sender, EventArgs e)
         {
-            int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
-            int b = a - (a * int.Parse(numChietKhau.Text) / 100);
-            txtThanhTien.Text = b.ToString();
+            int a = int.Parse(txtDonGia.Text);
+            int b = int.Parse(numSoLg.Value.ToString());
+            int c = int.Parse(numChietKhau.Value.ToString());
+            txtThanhTien.Text = Convert.ToString(HoaDonBUS.TinhTien(a, b, c));
+            //int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
+            //int b = a - (a * int.Parse(numChietKhau.Text) / 100);
+            //txtThanhTien.Text = b.ToString();
         }
 
         public void CmbTenHH_SelectedIndexChanged(object sender, EventArgs e)
@@ -176,9 +194,13 @@ namespace QuanLyHoaDon
 
         public void NumChietKhau_MouseUp(object sender, MouseEventArgs e)
         {
-            int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
-            int b = a - (a * int.Parse(numChietKhau.Text) / 100);
-            txtThanhTien.Text = b.ToString();
+            int a = int.Parse(txtDonGia.Text);
+            int b = int.Parse(numSoLg.Value.ToString());
+            int c = int.Parse(numChietKhau.Value.ToString());
+            txtThanhTien.Text = Convert.ToString(HoaDonBUS.TinhTien(a, b, c));
+            //int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
+            //int b = a - (a * int.Parse(numChietKhau.Text) / 100);
+            //txtThanhTien.Text = b.ToString();
         }
 
         public void DgvHoaDon_DoubleClick(object sender, EventArgs e)
@@ -295,21 +317,31 @@ namespace QuanLyHoaDon
         }
         private void NumDaTra_MouseUp(object sender, MouseEventArgs e)
         {
-            int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
-            txtConNo.Text = a.ToString();
+            int a = int.Parse(txtThanhTien.Text);
+            int b = int.Parse(numDaTra.Text);
+            txtConNo.Text = Convert.ToString(HoaDonBUS.TinhNo(a, b));
+            //int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
+            //txtConNo.Text = a.ToString();
         }
 
         private void NumDaTra_MouseDown(object sender, MouseEventArgs e)
         {
-            int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
-            txtConNo.Text = a.ToString();
+            int a = int.Parse(txtThanhTien.Text);
+            int b = int.Parse(numDaTra.Text);
+            txtConNo.Text = Convert.ToString(HoaDonBUS.TinhNo(a, b));
+            //int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
+            //txtConNo.Text = a.ToString();
         }
 
         private void NumChietKhau_MouseDown(object sender, MouseEventArgs e)
         {
-            int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
-            int b = a - (a * int.Parse(numChietKhau.Text) / 100);
-            txtThanhTien.Text = b.ToString();
+            int a = int.Parse(txtDonGia.Text);
+            int b = int.Parse(numSoLg.Value.ToString());
+            int c = int.Parse(numChietKhau.Value.ToString());
+            txtThanhTien.Text = Convert.ToString(HoaDonBUS.TinhTien(a, b, c));
+            //int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
+            //int b = a - (a * int.Parse(numChietKhau.Text) / 100);
+            //txtThanhTien.Text = b.ToString();
         }
     }
 }

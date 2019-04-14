@@ -64,5 +64,9 @@ namespace BUS
         {
             return HoaDonDAO.TinhTien(soluong, dongia, chietkhau);
         }
+        public int TinhNo(int thanhtien, int datra)
+        {
+            return HoaDonDAO.TinhNo(thanhtien, datra);
+        }
     }
 }
