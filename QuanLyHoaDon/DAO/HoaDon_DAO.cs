@@ -275,5 +275,11 @@ namespace DAO
                 Disconnect();
             }
         }
+        public int TinhTien(int soluong,int dongia, int chietkhau)
+        {
+            int thanhtien = 0;
+            thanhtien = dongia * soluong - ((dongia * soluong) * chietkhau / 100);
+            return thanhtien;
+        }
     }
 }

@@ -60,5 +60,9 @@ namespace BUS
         {
             return HoaDonDAO.SearchByPhone(valueSearch);
         }
+        public int TinhTien(int soluong, int dongia, int chietkhau)
+        {
+            return HoaDonDAO.TinhTien(soluong, dongia, chietkhau);
+        }
     }
 }

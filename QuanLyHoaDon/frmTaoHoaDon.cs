@@ -28,7 +28,7 @@ namespace QuanLyHoaDon
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
         }
-        private void Refresh_HD()
+        public void Refresh_HD()
         {
             txtMaHD.Text = txtTenKH.Text = txtDiaChi.Text = txtSdt.Text = txtDvt.Text = cmbTenHH.Text = txtMaHH.Text = "";
             numChietKhau.Value = numDaTra.Value = numSoLg.Value =  0;
@@ -83,47 +83,51 @@ namespace QuanLyHoaDon
             //
         }
         //event value changed
-        private void NumSoLg_ValueChanged(object sender, EventArgs e)
+        public void NumSoLg_ValueChanged(object sender, EventArgs e)
         {
-            int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
-            int b = a - (a * int.Parse(numChietKhau.Text) / 100);
-            txtThanhTien.Text = b.ToString();
+            int a = int.Parse(txtDonGia.Text);
+            int b = int.Parse(numSoLg.Value.ToString());
+            int c = int.Parse(numChietKhau.Value.ToString());
+            txtThanhTien.Text = Convert.ToString(HoaDonBUS.TinhTien(a, b, c));
+            //int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
+            //int b = a - (a * int.Parse(numChietKhau.Text) / 100);
+            //txtThanhTien.Text = b.ToString();
         }
         //event 
-        private void NumSoLg_Enter(object sender, EventArgs e)
+        public void NumSoLg_Enter(object sender, EventArgs e)
         {
             int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
             int b = a - (a * int.Parse(numChietKhau.Text) / 100);
             txtThanhTien.Text = b.ToString();
         }
 
-        private void NumDaTra_ValueChanged(object sender, EventArgs e)
+        public void NumDaTra_ValueChanged(object sender, EventArgs e)
         {
             int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
             txtConNo.Text = a.ToString();
         }
         //event
-        private void NumDaTra_Enter(object sender, EventArgs e)
+        public void NumDaTra_Enter(object sender, EventArgs e)
         {
             int a = int.Parse(txtThanhTien.Text) - int.Parse(numDaTra.Text);
             txtConNo.Text = a.ToString();
         }
 
-        private void NumChietKhau_ValueChanged(object sender, EventArgs e)
+        public void NumChietKhau_ValueChanged(object sender, EventArgs e)
         {
             int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
             int b = a - (a * int.Parse(numChietKhau.Text) / 100);
             txtThanhTien.Text = b.ToString();
         }
 
-        private void NumChietKhau_Enter(object sender, EventArgs e)
+        public void NumChietKhau_Enter(object sender, EventArgs e)
         {
             int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
             int b = a - (a * int.Parse(numChietKhau.Text) / 100);
             txtThanhTien.Text = b.ToString();
         }
 
-        private void CmbTenHH_SelectedIndexChanged(object sender, EventArgs e)
+        public void CmbTenHH_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (cmbTenHH.Text)
             {
@@ -170,14 +174,14 @@ namespace QuanLyHoaDon
             }
         }
 
-        private void NumChietKhau_MouseUp(object sender, MouseEventArgs e)
+        public void NumChietKhau_MouseUp(object sender, MouseEventArgs e)
         {
             int a = int.Parse(txtDonGia.Text) * int.Parse(numSoLg.Value.ToString());
             int b = a - (a * int.Parse(numChietKhau.Text) / 100);
             txtThanhTien.Text = b.ToString();
         }
 
-        private void DgvHoaDon_DoubleClick(object sender, EventArgs e)
+        public void DgvHoaDon_DoubleClick(object sender, EventArgs e)
         {
             btnXoa.Enabled = true;
             btnSua.Enabled = true;
@@ -200,7 +204,7 @@ namespace QuanLyHoaDon
             }
         }
 
-        private void BtnXoa_Click(object sender, EventArgs e)
+        public void BtnXoa_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn xóa?", "Cảnh báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {

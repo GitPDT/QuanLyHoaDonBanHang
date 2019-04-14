@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="LoginTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestHoaDon.cs" />
     <Compile Include="TestKH.cs" />
   </ItemGroup>
   <ItemGroup>
