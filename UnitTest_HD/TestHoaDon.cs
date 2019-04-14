@@ -64,5 +64,22 @@ namespace UnitTest_HD
             bool actual = HoadonBus.AddHoaDon(hd);
             Assert.IsFalse(actual);
         }
+        //
+        [TestMethod]
+        public void UpdateHoaDon()
+        {
+            //Update duoc thi Pass
+            HoaDon hd = new HoaDon("T11", "20/11/2019", "Phan Đức Tài", "Go Vap", "09897766", "HH1", "Thép", 0, "0", 0, 0, 0, 0, 0);
+            bool actual = HoadonBus.UpdateHoaDon(hd);
+            Assert.IsTrue(actual);
+        }
+        //
+        [TestMethod]
+        public void XoaHoaDon()
+        {
+            //Xoa duoc thi Pass
+            bool actual = HoadonBus.DeleteHoaDon("T11");
+            Assert.IsTrue(actual);
+        }
     }
 }
