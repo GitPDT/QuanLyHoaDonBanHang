@@ -16,7 +16,7 @@ namespace UnitTest_HD
         public void ThemKhachHang_NhapDungThongTin()
         {
             //Nhap thong tin dung - neu dung thi pass
-            KhachHang kh1 = new KhachHang("K11", "Phan", "Go Vap", "Nam", "08389283882");
+            KhachHang kh1 = new KhachHang("PH2", "Phan", "Go Vap", "Nam", "08389283882");
             bool actual = dao.AddCustomer(kh1);
             Assert.IsTrue(actual);
         }
@@ -28,6 +28,22 @@ namespace UnitTest_HD
             KhachHang kh2 = new KhachHang("PH2", "Phan", "Go Vap", "Nam", "08389283882");
             bool actual = dao.AddCustomer(kh2);
             Assert.IsFalse(actual);
+        }
+        [TestMethod]
+        public void UpdateKhachHang()
+        {
+            //Neu Update thanh cong thi Pass
+            KhachHang kh2 = new KhachHang("PH2", "Phan Duc Tai", "Go Vap", "Nam", "08389283882");
+            bool actual = dao.UpdateCustomer(kh2);
+            Assert.IsTrue(actual);
+        }
+        [TestMethod]
+        public void XoaKhachHang()
+        {
+            //Neu Xoa thanh cong thi Pass
+            //KhachHang kh2 = new KhachHang("PH2", "Phan Duc Tai", "Go Vap", "Nam", "08389283882");
+            bool actual = dao.Delete("PH2");
+            Assert.IsTrue(actual);
         }
     }
 }
