@@ -37,7 +37,7 @@ namespace DAO
                 cn.Close();
         }
 
-        public int Login(string user, string pass)
+        public bool Login(string user, string pass)
         {
             string sql = "SELECT COUNT(UserName) FROM Users WHERE Username = '" + user + "' AND Password = '" + pass + "'";
 
@@ -52,9 +52,9 @@ namespace DAO
                 int number = (int)myEXecuteScalar(sql);
 
                 if (number > 0)
-                    return 0;
+                    return true;
                 else
-                    return -1;
+                    return false;
             }
             catch (SqlException ex)
             {

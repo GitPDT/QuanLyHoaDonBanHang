@@ -11,7 +11,7 @@ namespace BUS
     public class LoginBUS
     {
         DataProvider dt = new DataProvider();
-        public int Login(string user, string pass)
+        public bool Login(string user, string pass)
         {
             try
             {
