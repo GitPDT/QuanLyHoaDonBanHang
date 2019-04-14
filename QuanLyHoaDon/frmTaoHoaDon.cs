@@ -74,7 +74,7 @@ namespace QuanLyHoaDon
             }
             catch (Exception)
             {
-                
+                MessageBox.Show("Mã hóa đơn đã tồn tại !");
             }
         }
 

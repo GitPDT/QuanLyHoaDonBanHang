@@ -30,7 +30,7 @@ namespace QuanLyHoaDon
         }
         private void BtnAddCus_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT * FROM KHACHHANG ";
+            //string sql = "SELECT * FROM KHACHHANG ";
             //
             if (txtMaKH.Text == "")
                 MessageBox.Show("Vui lòng nhập mã khách hàng");
@@ -49,9 +49,9 @@ namespace QuanLyHoaDon
                     else
                         gender = "Nữ";
                     KhachHang cus = new KhachHang(maKh, tenKH, diaChiKH, gender, sdtKH);
-                    bool result = customerBUS.AddCustomerBUS(cus);
+                    int result = customerBUS.AddCustomerBUS(cus);
 
-                    if (result == true)
+                    if (result > 0)
                     {
                         MessageBox.Show("Thêm thành công!");
                     }
@@ -177,6 +177,7 @@ namespace QuanLyHoaDon
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             txtTimKiem.Text = "";
+            Clear();
             LoadCus();
         }
     }
