@@ -30,6 +30,8 @@ namespace QuanLyHoaDon
         }
         public void Refresh_HD()
         {
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
             txtMaHD.Text = txtTenKH.Text = txtDiaChi.Text = txtSdt.Text = txtDvt.Text = cmbTenHH.Text = txtMaHH.Text = "";
             numChietKhau.Value = numDaTra.Value = numSoLg.Value =  0;
             txtConNo.Text = txtThanhTien.Text = txtDonGia.Text = "0";

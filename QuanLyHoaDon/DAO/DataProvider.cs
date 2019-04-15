@@ -69,11 +69,11 @@ namespace DAO
         {
             SqlCommand cmd = new SqlCommand(sql, cn);
             cmd.CommandType = CommandType.Text;
-
+           
             Connect();
             try
             {
-                int noOfRows = cmd.ExecuteNonQuery();
+                int noOfRows = (int)cmd.ExecuteNonQuery();
                 return noOfRows;
             }
             catch (SqlException ex)
@@ -87,7 +87,9 @@ namespace DAO
         }
         public int myEXecuteScalar(string sql)
         {
-            SqlCommand cmd = new SqlCommand(sql, cn);
+            SqlCommand cmd = new SqlCommand(/*sql, cn*/);
+            cmd.Connection = cn;
+            cmd.CommandText = sql;
             cmd.CommandType = CommandType.Text;
 
             Connect();

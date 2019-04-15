@@ -17,7 +17,7 @@ namespace DAO
                 + cus.MaKH + "' , N'" + cus.TenKH + "' , N'" + cus.DiaChi + "' , N'" + cus.GioiTinh + "' , '" + cus.SDT + "')";
             try
             {
-                int number = myExecuteNoneQuery(sql);
+                int number = (int)myExecuteNoneQuery(sql);/*myEXecuteScalar(sql);*/
                 if (number > 0)
                 {
                     return true;

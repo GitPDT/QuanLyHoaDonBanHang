@@ -202,7 +202,6 @@
             this.txtDonGia.Size = new System.Drawing.Size(183, 22);
             this.txtDonGia.TabIndex = 8;
             this.txtDonGia.Text = "0";
-            
             // 
             // label7
             // 
@@ -336,7 +335,6 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(243, 22);
             this.txtTimKiem.TabIndex = 13;
-          
             // 
             // btnTimKiem
             // 
@@ -664,6 +662,8 @@
             // 
             // cmbTenHH
             // 
+            this.cmbTenHH.BackColor = System.Drawing.SystemColors.Control;
+            this.cmbTenHH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTenHH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTenHH.FormattingEnabled = true;
             this.cmbTenHH.Items.AddRange(new object[] {
@@ -770,7 +770,7 @@
             this.txtNgay.Name = "txtNgay";
             this.txtNgay.Size = new System.Drawing.Size(237, 22);
             this.txtNgay.TabIndex = 1;
-            this.txtNgay.Value = new System.DateTime(2019, 4, 12, 21, 55, 11, 0);
+            this.txtNgay.Value = new System.DateTime(2019, 4, 15, 16, 7, 41, 0);
             // 
             // label4
             // 
